@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<title>Profile page</title>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="profilestyle.css">
+</head>
+<body>
+
+<div class="page-header col-sm-12">
+			<a href="index.php">HUSSLA.NG</a>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="jumbotron jumbotron-fluid col-sm-12">
+				<img src="gituploads/me_k0dpsr.jpg" class="mx-auto d-block img-fluid img-re">
+			
+			&nbsp;
+
+			<div class="details" >
+			<h1>Kenny Salim</h1>
+			<h3>Kenny Barbing Salon</h3>
+			<p><em>Stylish Cuts</em></p>
+			<p><address>11, Adediran Street, Magodo</address></p>
+			<p>Phone: <b>+2348053383827</b></p>
+			<span id="location"></span>
+			</div>
+
+			&nbsp;
+			<h2 align="center" style="font-weight: bold;">Contact:</h2>
+			<div class="contact">
+				<a href="sms: <?php echo '+2348053383827'?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="tel: <?php echo '+2348053383827' ?>"><i class="fa fa-phone" aria-hidden="true" ></i></a>
+			</div>
+
+
+
+			<div class="rate" align="center">
+				<p style="color: #000d1a">Rate Hussla:</p><br>
+			<i class="fa fa-star fa-2x" data-index = "0" id="starOne"></i>
+			<i class="fa fa-star fa-2x" data-index = "1" id="starTwo"></i>
+			<i class="fa fa-star fa-2x" data-index = "2" id="starThree"></i>
+			<i class="fa fa-star fa-2x" data-index = "3" id="starFour"></i> 
+			<i class="fa fa-star fa-2x" data-index = "4" id="starFive"></i><br>
+			<span id="message"></span>
+			</div>
+
+			<div class="reviews">
+				<h2 style="color: #000d1a; padding-left: 50px;">Reviews:</h2>
+			</div>
+			 <div class="show-review">
+				<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
+				This guy is good<p>
+						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
+				He's trying<p>
+						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
+				This guy is good<p>
+						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
+				This guy is good<p>
+						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
+				This guy is good<p>
+
+					<p class="view-all-comments"><a href="comments.php?id=<?php echo $id?>">See all reviews</a></p>
+			<div class="review">
+				<p style="font-weight: bold; font-size: 25px;">Leave a review:</p>
+					<form action="" method="POST">
+					<input type="hidden" name="date" value="">
+					<input type="hidden" name="first" value="">
+					<input type="hidden" name="last" value="">
+				<textarea name="message"></textarea><br>
+				<input type="submit" name="Post" value="Post">
+				</form>
+				<span id="logged-in"><?php echo $msg; ?></span>
+				</div>
+
+				</div>
+			
+	</div>
+	
+
+	<div class="entry col-sm-12" id="signin-form">
+	
+	<p class="cast">You are not signed in, you need to be signed in to post<br> your review</p>
+	<span id="sign-in"><a href="commentsignin.php">Sign into your account now</a></span>
+
+	<p>Don't have an account?</p>
+		<span id="sign-up" class="col"><a href="customersignup.php"> Sign Up Now</a></span>
+	</div>
+
+<footer>
+		<div class="footer">
+			<div id="About">
+				<h4>Hussla</h4>
+				<ul>
+				    <li>About Us</li>
+				    <li>Why Hussla</li>
+				    <li>How It Works</li>
+				    <li>Partners</li>
+				</ul>
+			</div>
+
+			<div id="customer">
+				<h4>Customers</h4>
+				<ul>
+				    <li>Testimonials</li>
+				    <li>Terms & Conditions</li>
+				    <li>Hussla Guarantee</li>
+				    <li>Privacy Policy</li>
+				</ul>
+			</div>
+
+			<div id="support">
+				<h4>Support</h4>
+				<ul>
+				    <li>FAQ</li>
+				    <li>Contact Us</li>
+				    <li>Feedback</li>
+				</ul>
+			</div>
+
+			<div id="social">
+				<h4>Social</h4>
+				<ul>
+				    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+				    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+				    <li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
+				    <li></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<script>
+		var ratedIndex = -1;
+  		
+  	$(document).ready(function () {
+  			$('address').each(function () {
+  	var link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent($(this).text()) + "' target= '_blank'>" + "Open Business Location in Google Maps" + "</a>";
+  			$('#location').html(link);
+  		})
+
+  		resetStarColors();
+
+  		if (localStorage.getItem('ratedIndex') != null)
+  		setStars(parseInt(localStorage.getItem('ratedIndex')));
+
+  		$('.fa-star').on('click', function () {
+  			ratedIndex = parseInt($(this).data('index')); 
+  			localStorage.setItem('ratedIndex', ratedIndex);
+  			saveToTheDB();
+  		})
+
+  		$('.fa-star').mouseover(function () {
+  			resetStarColors();
+
+  		var currentIndex = parseInt($(this).data('index'));
+  		setStars(currentIndex);
+  		})
+
+  		$('.fa-star').mouseleave( function () {
+  			resetStarColors();
+
+  			if (ratedIndex != -1)
+  				setStars(ratedIndex);
+  		})
+
+  	
+  	if ($('#logged-in').text() === "Not Logged In.") {
+  		$("#logged-in").hide();
+  		$("#signin-form").css("display", "block");
+  		$(".wrapper").css("filter", "blur(5px)");
+  	}
+
+  
+  	})
+
+  		function saveToTheDB() {
+  		$.ajax({
+  			url: "profile.php?id=<?php echo $id ?>",
+  			method: "POST",
+  			dataType: "json",
+  			data: {
+  				save: 1,
+  				ratedIndex: ratedIndex
+  			}, 
+  		})
+  	}
+
+  	function setStars(max) {
+  		for (var i = 0; i <=max; i++)
+  					$('.fa-star:eq('+i+')').css('color', 'orange');
+  	}
+
+  	function resetStarColors() {
+  		$('.fa-star').css('color', 'black');
+  	}
+
+  	$('#starOne').mouseover(function() {
+  		$('#message').text("Bad!");
+  		$('#message').css("color", "red");
+  	})
+
+  	$('#starOne').mouseleave(function() {
+  		$('#message').text("");
+  	})
+
+  	$('#starTwo').mouseover(function() {
+  		$('#message').text("Okay");
+  		$('#message').css("color", "#990000");
+  	})
+
+  	$('#starTwo').mouseleave(function() {
+  		$('#message').text("");
+  	})
+
+  	$('#starThree').mouseover(function() {
+  		$('#message').text("Acceptable");
+  		$('#message').css("color", "#cc9900");
+  	})
+
+  	$('#starThree').mouseleave(function() {
+  		$('#message').text("");
+  	})
+
+  	$('#starFour').mouseover(function() {
+  		$('#message').text("Good!");
+  		$('#message').css("color", "#009900");
+  	})
+
+  	$('#starFour').mouseleave(function() {
+  		$('#message').text("");
+  	})
+
+  	$('#starFive').mouseover(function() {
+  		$('#message').text("Excellent!");
+  		$('#message').css("color", "#006600");
+  	})
+
+  	$('#starFive').mouseleave(function() {
+  		$('#message').text("");
+  	})
+
+
+  
+
+  	$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+</script>
+</html>
