@@ -463,13 +463,13 @@
 				This guy is good<p>
 
 					<p class="view-all-comments"><a href="comments.php?id=<?php echo $id?>">See all reviews</a></p>
-			<div class="review">
+			<div class="review form-group">
 				<p style="font-weight: bold; font-size: 25px;">Leave a review:</p>
 					<form action="" method="POST">
 					<input type="hidden" name="date" value="">
 					<input type="hidden" name="first" value="">
 					<input type="hidden" name="last" value="">
-				<textarea name="message" class="col-sm-12"></textarea><br>
+				<textarea name="message" class="form-control"></textarea><br>
 				<input type="submit" name="Post" value="Post">
 				</form>
 				<span id="logged-in"><?php echo $msg; ?></span>
