@@ -396,6 +396,9 @@
 		margin-left: 200px;
 	}
 
+    .review textarea {
+        height: 150px;
+    }
 	</style>
 </head>
 <body>
@@ -455,7 +458,7 @@
 				This guy is good<p>
 
 					<p class="view-all-comments"><a href="comments.php?id=<?php echo $id?>">See all reviews</a></p>
-			<div class="review form-group">
+			<div class="review form-group col-sm-6">
 				<p style="font-weight: bold; font-size: 25px;">Leave a review:</p>
 					<form action="" method="POST">
 					<input type="hidden" name="date" value="">
