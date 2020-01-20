@@ -1,86 +1,100 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset=utf-8>
-	<meta name=description content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-	<title>Profile page</title>
-	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<style type="text/css">
-		body {
-		background-color: #ffffff;
-		font-family: Raleway; 
-		margin:0;
-	}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<title>Welcome to Hussla.ng</title>
+ 	<meta charset=utf-8>
+ 	<meta name=description content="">
+ 	<meta name=viewport content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+ 		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 	<style>
+ 		
+ 	body {
+ 		background-color: #ffffff;
+ 	}
 
-	.page-header {
-			background-color: #000d1a;
-			text-align: center;
-			height: 60px;
-			padding-top: 0px;
-			font-size: 45px;
-			font-weight: bold;
-		}	
+ 	.pagesetup {
+ 		margin-left: auto;
+ 		margin-right: auto;
+ 		margin-bottom: 80px;
+ 		margin-top: 60px;
+ 	}
 
-		.page-header a {
-			color: #FFFFF0;
-			text-decoration: none;
-			text-align: center;
-		}
+ 	.Info {
+ 		margin-top: 30px;
+ 		height: 400px;
+ 		width: 80%;
+ 		text-align: center;
+ 		color: #000000;
+ 		padding-top: 20px;
+ 		padding-left: 10px;
+ 		padding-right: 10px;
+ 		margin-bottom: 60px;
+ 		padding-bottom: 50px;
+ 		font-family: Raleway;
+ 		background-color: #f2f2f2;
+ 		border: 1px solid #1f2e2e;
+ 		background-size: contain;
+ 		margin-left: auto;
+ 		margin-right: auto;
+ 		font-size: 5vw;
+ 	}
 
-	.jumbotron {
-		background-color: #f2f2f2;
-		border: 1px solid #1f2e2e;
-		margin-top: 20px;
-	}
+ 	.getStarted {
+ 		text-decoration: none;
+ 		background-color: #003366;
+ 		border-style: outset;
+ 		border-radius: 4px;
+ 		color: #FFFFF0;
+ 		margin-top: 10px;
+ 		margin-bottom: 10px;
+ 		padding: 12px;
+ 		width: 145px;
+ 		height: 100px;
+ 		font-size: 6vw;
+ 	}
 
-	.details{
+ 	.help {
+ 		font-size: 5vw;
+ 		color: #ffffff;
+ 		position: relative;
+ 	}
+
+	.pick {
+		background-color:  #334d4d;
+		text-decoration: none;
+		font-family: Raleway;
+		position: relative;
+		top:  50px;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		box-sizing: content-box;
+		border-style: outset;
+		color: #ffffff;
+		opacity: 0.8;
+		width: 250px;
+		height: 50px;
 		text-align: center;
-
+		padding-top: 15px;
+		cursor: pointer;
+		margin-bottom: 10px;
+		font-size: 7vw;
+		border: 2px solid #c3c3c3;
 	}
 
-	
-	img {
-	    border-radius: 100% !important;
-	    width: 250px;
-	    height: 250px;
-	    border: 7px solid #000000;
-	    margin-top: -10px;
+
+	#tag, #tag1, #tag2 {
+		text-decoration: none;
+		color: #ffffff;
 	}
 
-	.rating {
-		font-size: 25px;
+	.box1:hover, .box2:hover, .box3:hover {
+		opacity: 0.6;
 	}
 
-	
-	.contact {
-		text-align: center;
-		font-size: 10vw;
-		padding-left: 25px;
-		margin-top: 20px;
-	}
-
-	.fa-phone {
-		margin: auto;
-		color: #4ED30B;
-		padding: 10px;
-		border: 2px solid #4ED30B;
-		border-radius: 100%;
-	}
-
-	.fa-envelope {
-		color: #E52D06;
-		padding: 12px;
-		border: 2px solid #E52D06;
-		border-radius: 100%;
-		vertical-align: center;
-	}
 
 	.footer {
 		margin-top: 30px;
@@ -88,16 +102,15 @@
 		height: 400px;
 		background-color: #000000;
 		font-family: Raleway;
-		color: #fff;
-		font-size: 3vw;
+		color: #FFFFF0;
 	}
 
-	
-	
+
 
 	#About, #customer, #social, #support {
 		width: 23%;
 		display: inline-block;
+		position: relative;
 	}
 
 	h4 {
@@ -109,393 +122,94 @@
 		list-style-type: none;
 	}
 
-	.details h1 {
-		font-size: 7vw;
-		font-family: Raleway;
-	}
-
-	.details h3 {
-		font-size: 8vw;
-		font-family: Raleway;
-		color: #334d4d;
-		font-weight: bold;
-	}
-
-	address {
-		font-size: 5vw;
-	}
-
-	.details p {
-		font-size: 5vw;
-		font-family: Raleway;
-		color: #000d1a;
-	}
-
-	.edit {
-		text-align: center;
-		margin-top: 30px;
-		background-color: #880000;
-		margin-left: 400px;
-		position: absolute;
-	}
-
-	.edit a {
-		text-decoration: none;
-		margin-top: 20px;
-		position: relative;
-		top: 20px;
-		color: #ffffff;
-		font-size: 20px;
-
-	}
-
-	.edit:hover {
-		opacity: .5;
-	}
-
-	.rate{
-		margin-top: 20px;
-		font-size: 20px;
-
-	}
-
-	.rate p {
-		font-size: 30px;
-		font-weight: bold;
-		color: #990000;
-		font-family: Raleway;
-	}
-
-	.fa-star {
-		margin-top: -30px;
-	}
-
-	.reviews {
-		margin-top: 60px;
-		font-family: Raleway;
-		padding-left: 20px;
-		
-	}
-
-	.review {
-		padding-left: -20px;
-	}
-
-	.reviews h2{
-		font-size: 30px;
-		color: #990000;
-
-	}
-
-	.reviews p{
-		font-size: 20px;
-		font-weight: bold;
-
-	}
-
-	input[type="submit"] {
-		width: 80px;
-		height: 50px;
-		background-color: #334d4d;
-		color: #fff;
-		font-size: 20px;
-		border-radius: 10%;
-		font-family: Raleway;
-	}
-
-	.show-review {
-		font-size: 5vw;
-		border: none;
-		padding-left: 50px;
-	}
-
-	
-	#cmment {
-		padding-right: 200px;
-	}
-	.view-all-comments {
-		font-size: 5vw;
-		padding-left: 70px;
-	}
-
-	.view-all-comments a {
-		text-decoration: none;
+	.Info h2{
 		color: #003366;
 		font-weight: bold;
+		font-size: 8vw;
 	}
 
-	.view-all-comments a:hover {
-		text-decoration: underline;
-		font-weight: bold;
+	.getStarted:hover {
+		background-color:#000;
+		text-decoration: none;
+		color: #fff;
+		border: 3px solid #c3c3c3;
 	}
 
-	.give-review {
-		width: 750px;
-		height: 200px;
-		background-color: #fff;
-		border: 3px solid #000d1a;
-		border-radius: 25px;
+	.navbar {
+		background-color: #000d1a !important;
 	}
 
-	#location {
-		font-size: 5vw;
-	}
-
-	#location a {
-		color: #ff6600;
-	}
-
-	 #sign-up a, #sign-in a {
-	 	color: #000d1a;
-	 	text-decoration: none;
-	 }
-
-	#location a:hover {
-		font-weight: bold;
-	}
-
-	#sign-up a:hover, #sign-in a:hover {
-		font-weight: bold;
-		text-decoration: underline;
-	}
-
-	#sign-in {
-		padding-top: 40px;
-		font-size: 18px;
-	}
-
-	#sign-up  {
-		padding-top: 40px;
-		font-size: 18px;
-	}
-
-	address {
-		font-size: 20px;
-		text-decoration: inherit;
-	}
-
-	.entry{
-		position: relative;
-		top: -1700px;
-		background-color: #fff;
-		max-width: 720px;
-		height: 220px;
-		border: 2px solid #1f2e2e;
-		display: none;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.entry h2 {
-		margin-top: 10px;
+	.navbar .navbar-brand {
+		color: #fff;
 		font-size: 7vw;
 	}
 
-	.entry p {
-		font-size: 5vw;
-		font-weight: bold;
+	.navbar .navbar-nav li a{
+		color: #fff !important;
 	}
 
-		.input-container {
-			display: -ms-flexbox;
-			display: flex;
-			width: 100%;
-			margin-bottom: 15px;
-			margin-top: 25px;
-			position: relative;
-		}
-		
-		.input-field {
-			 width: 100%;
-			 padding: 15px;
-			 outline: none;
-			 font-size: 20px;
-		}
-		
-		#password-field {
-			 width: 100%;
-			 padding: 15px;
-			 outline: none;
-			 font-size: 20px;
-		}
+	.navbar .navbar-nav li a:hover {
+		background-color: #f2f2f2;
+		color: #000000 !important;
+		padding: 10px;
+		border-radius: 10px;
+	}
 
-		#contain {
-			position: absolute;
-			bottom: -3px;
-			right: 7px;
-			width: 34px;
-			height: 50px;
-			cursor: pointer;
-			border: none;
-		}
-
-		.btn {
-   				width: 500px;
-   				color: #ffffff;
-  				background-color: #000d1a;
-   				padding: 15px;
-  				border: 1px solid #000000;
-   				font-size: 20px;
-   				font-weight: bold;
-  				margin-bottom: 10px;
-  				margin-left: 2px;
- 			}
-
- .btn:hover {
-  opacity: 0.5;
+	.navbar-toggler {
+		border: 3px solid #f2f2f2;
+	}
+ @media only screen and (min-width: 601px) {
+ 	.Info {height: 360px; font-size: 15px}
+ 	.Info h2{font-size: 30px;}
+ 	.pick {font-size: 25px}
+ 	.getStarted {font-size: 18px}
+ 	.navbar .navbar-brand {font-size: 25px}
  }
-
-  		.icon{
-  		background-color: #334d4d;
- 		 color: #ffffff;
- 		 padding: 10px;
-		 min-width: 30px;
-		 text-align: center;
-		 padding-top: 15px;
-}
-
-	#password-field:hover, .input-field:hover {
-			border:1px solid #000000;
-	}
-
-		.error {
-			color: red;
-		}
-
-		.sign{
-	position: relative;
-	background-color: #003366;
-	width: 90px;
-	height: 100px;
-	margin-top: 10px;
-	border-radius: 20%;
-}
-
-		.sign p{
-	font-size: 50px;
-	color: #ffffff;
-	text-align: center;
-	padding: 18px;
-}
-
-	#envelope {
-		border: none;
-		border-radius: 0%;
-	}
-
-	.cast {
-		font-size: 20px;
-		margin-left: 0px;
-		padding-top: 15px;
-		color: #00004d;
-		text-align: center;
-	} 
-	
-
-	.not-reviewed{
-		font-weight: bold;
-		font-size: 20px;
-		padding-left: 20px;
-	}
-
-    .review textarea {
-        height: 150px;
-    }
-
-
-	.footer h4 {
-		font-size: 5vw;
-	}
-	</style>
-</head>
+ 	</style>
+ </head>
 <body>
+		<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+			<span class="navbar-brand navbar-text">Hussla.ng</span>
+			<button class="toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon" ></span>
+			</button>
 
-<div class="page-header col-sm-12">
-			<a href="index.php">HUSSLA.NG</a>
-		</div>
-
+			<div class="collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+						<li class="nav-item"><a href="customersignin.php" class="nav-link">Sign In(Customer)</a></li>
+						<li class="nav-item"><a href="customersignup.php" class="nav-link">Sign Up(Customer)</a></li>
+					</ul>
+				</div>
+		</nav>
 		<div class="container">
 			<div class="row">
-				<div class="jumbotron jumbotron-fluid col-sm-12">
-				<img src="gituploads/me_k0dpsr.jpg" class="mx-auto d-block img-fluid img-re">
-			
-			&nbsp;
-
-			<div class="details" >
-			<h1>Kenny Salim</h1>
-			<h3>Kenny Barbing Salon</h3>
-			<p><em>Stylish Cuts</em></p>
-			<p><address>11, Adediran Street, Magodo</address></p>
-			<p>Phone: <b>+2348053383827</b></p>
-			<span id="location"></span>
-			</div>
-
-			&nbsp;
-			<h2 align="center" style="font-weight: bold; font-size: 7vw">Contact:</h2>
-			<div class="contact">
-				<a href="sms: +2348053383827"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-				<a href="tel: +2348053383827"><i class="fa fa-phone" aria-hidden="true" ></i></a>
-			</div>
-
-
-
-			<div class="rate" align="center">
-				<p style="color: #000d1a; font-size: 7vw">Rate Hussla:</p><br>
-			<i class="fa fa-star fa-2x" data-index = "0" id="starOne"></i>
-			<i class="fa fa-star fa-2x" data-index = "1" id="starTwo"></i>
-			<i class="fa fa-star fa-2x" data-index = "2" id="starThree"></i>
-			<i class="fa fa-star fa-2x" data-index = "3" id="starFour"></i> 
-			<i class="fa fa-star fa-2x" data-index = "4" id="starFive"></i><br>
-			<span id="message"></span>
-			</div>
-
-			<div class="reviews">
-				<h2 style="color: #000d1a; padding-left: 50px; font-size: 7vw;">Reviews:</h2>
-			</div>
-			 <div class="show-review col-sm-6">
-				<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
-				This guy is good<p>
-						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
-				He's trying<p>
-						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
-				This guy is good<p>
-						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
-				This guy is good<p>
-						<p><span style="font-weight: bold;">John Doe</span> commented on <span style="font-style: italic; color: #003366;">11th January 2019 10:49</span> <b>:</b><br><br>
-				This guy is good<p>
-
-					<p class="view-all-comments"><a href="comments.php?id=<?php echo $id?>">See all reviews</a></p>
-			<div class="review form-group col-sm-6">
-				<p style="font-weight: bold; font-size: 5vw;">Leave a review:</p>
-					<form action="" method="POST">
-					<input type="hidden" name="date" value="">
-					<input type="hidden" name="first" value="">
-					<input type="hidden" name="last" value="">
-				<textarea name="message" class="form-control"></textarea><br>
-				<input type="submit" name="Post" value="Post">
-				</form>
-				<span id="logged-in">Not Logged In.</span>
+			<div class="jumbotron jumbotron-fluid"></div>
+			<div class="pagesetup">
+					<a href="signin.php"  class="pick btn btn-primary">SIGN IN</a>
+					&nbsp;<br>
+					<a href="signin.php"  class="pick btn btn-primary">SIGN UP</a>
+					&nbsp;<br/>
+					<a href="signin.php"  class="pick btn btn-primary">FIND A HUSSLA</a>
 				</div>
-
-				</div>
-			
+			</div>
+			<div class="Info">
+				<h2>ABOUT HUSSLA.NG</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				&nbsp;<br/>
+				<h4><a href="customersignin.php" class="getStarted">Get Started</a></h4>
+			</div>
+		</div>
 	</div>
-	
-
-	<div class="entry col-sm-12" id="signin-form">
-	
-		<div align="center">
-	<p class="cast">You are not signed in, you need to be signed in to post your review</p>
-	<span id="sign-in"><a href="commentsignin.php">Sign into your account now</a></span>
-	
-	
-	<p>Don't have an account?</p>
-		<span id="sign-up" class="col"><a href="customersignup.php"> Sign Up Now</a></span>
-	</div>
-</div>
-
-		<div class="footer col-sm-12">
-			<div id="About" class="col-sm-3">
+	<footer>
+		<div class="footer">
+			<div id="About">
 				<h4>Hussla</h4>
 				<ul>
 				    <li>About Us</li>
@@ -505,7 +219,7 @@
 				</ul>
 			</div>
 
-			<div id="customer" class="col-sm-3">
+			<div id="customer">
 				<h4>Customers</h4>
 				<ul>
 				    <li>Testimonials</li>
@@ -515,7 +229,7 @@
 				</ul>
 			</div>
 
-			<div id="support" class="col-sm-3">
+			<div id="support">
 				<h4>Support</h4>
 				<ul>
 				    <li>FAQ</li>
@@ -524,7 +238,7 @@
 				</ul>
 			</div>
 
-			<div id="social" class="col-sm-3">
+			<div id="social">
 				<h4>Social</h4>
 				<ul>
 				    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
@@ -532,137 +246,19 @@
 				    <li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
 				    <li></li>
 				</ul>
-            </div>
-            </div>
+			</div>
 		</div>
-	</div>
+	</footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script>
+		document.getElementById("tag").addEventListener("click", myFunction );
+
+	function myFunction() {
+		alert("Sign up to start enjoying the full Hussla.ng package");
+	}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-<script>
-		var ratedIndex = -1;
-  		
-  	$(document).ready(function () {
-  			$('address').each(function () {
-  	var link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent($(this).text()) + "' target= '_blank'>" + "Open Business Location in Google Maps" + "</a>";
-  			$('#location').html(link);
-  		})
-
-  		resetStarColors();
-
-  		if (localStorage.getItem('ratedIndex') != null)
-  		setStars(parseInt(localStorage.getItem('ratedIndex')));
-
-  		$('.fa-star').on('click', function () {
-  			ratedIndex = parseInt($(this).data('index')); 
-  			localStorage.setItem('ratedIndex', ratedIndex);
-  			saveToTheDB();
-  		})
-
-  		$('.fa-star').mouseover(function () {
-  			resetStarColors();
-
-  		var currentIndex = parseInt($(this).data('index'));
-  		setStars(currentIndex);
-  		})
-
-  		$('.fa-star').mouseleave( function () {
-  			resetStarColors();
-
-  			if (ratedIndex != -1)
-  				setStars(ratedIndex);
-  		})
-
-  	
-  	if ($('#logged-in').text() === "Not Logged In.") {
-  		$("#logged-in").hide();
-  		$("#signin-form").css("display", "block");
-  		$(".jumbotron").css("filter", "blur(5px)");
-  	}
-
-  
-  	})
-
-  		function saveToTheDB() {
-  		$.ajax({
-  			url: "profile.php?id=<?php echo $id ?>",
-  			method: "POST",
-  			dataType: "json",
-  			data: {
-  				save: 1,
-  				ratedIndex: ratedIndex
-  			}, 
-  		})
-  	}
-
-  	function setStars(max) {
-  		for (var i = 0; i <=max; i++)
-  					$('.fa-star:eq('+i+')').css('color', 'orange');
-  	}
-
-  	function resetStarColors() {
-  		$('.fa-star').css('color', 'black');
-  	}
-
-  	$('#starOne').mouseover(function() {
-  		$('#message').text("Bad!");
-  		$('#message').css("color", "red");
-  	})
-
-  	$('#starOne').mouseleave(function() {
-  		$('#message').text("");
-  	})
-
-  	$('#starTwo').mouseover(function() {
-  		$('#message').text("Okay");
-  		$('#message').css("color", "#990000");
-  	})
-
-  	$('#starTwo').mouseleave(function() {
-  		$('#message').text("");
-  	})
-
-  	$('#starThree').mouseover(function() {
-  		$('#message').text("Acceptable");
-  		$('#message').css("color", "#cc9900");
-  	})
-
-  	$('#starThree').mouseleave(function() {
-  		$('#message').text("");
-  	})
-
-  	$('#starFour').mouseover(function() {
-  		$('#message').text("Good!");
-  		$('#message').css("color", "#009900");
-  	})
-
-  	$('#starFour').mouseleave(function() {
-  		$('#message').text("");
-  	})
-
-  	$('#starFive').mouseover(function() {
-  		$('#message').text("Excellent!");
-  		$('#message').css("color", "#006600");
-  	})
-
-  	$('#starFive').mouseleave(function() {
-  		$('#message').text("");
-  	})
-
-
-  
-
-  	$(".toggle-password").click(function() {
-
-  $(this).toggleClass("fa-eye fa-eye-slash");
-  var input = $($(this).attr("toggle"));
-  if (input.attr("type") == "password") {
-    input.attr("type", "text");
-  } else {
-    input.attr("type", "password");
-  }
-});
-</script>
-</html>
+ </body>
+ </html>
