@@ -12,369 +12,180 @@
 	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 	<style type="text/css">
-		body {
-			background-color: #ffffff;
-			font-family: Raleway; 
-			margin:0;
-		}
-		.page-header {
-			background-color: #000d1a;
-			text-align: center;
-			height: 60px;
-			padding-top: 0px;
-			font-size: 45px;
-			font-weight: bold;
-		}	
-
-		.page-header a {
-			color: #FFFFF0;
-			text-decoration: none;
-			text-align: center;
-		}
-
-		.search-container {
-			margin-left: 0px;
-			margin-right: auto;
-			margin-bottom: 10px;
-      display: block;
-      width: 200px;
-		}
-
-		input[type=text] {
-			padding: 6px;
-		  margin-top: 8px;
-		  font-size: 17px;
-		  border: none;
-		  border-radius: 20px;
-      margin-left: 5px;
-		}
-
-		#search:hover {
-			border: 1px solid #c3c3c3;
-		}
-
-    .avgRating {
-      font-size: 4.5vw;
-    }
-
-		.search-container button:hover {
-			background: #000000;
-		}
-
-
-		.column {
-			background-color: #f2f2f2;
-			width: 100%;
-			height: 216px;
-			margin-left: auto;
-			margin-left: auto;
-			margin-top: 60px;
-			border-radius: 5px;
-			padding-top: 10px;
-			margin-bottom: 15px;
-			border: 1px solid #1f2e2e;
-		}
-
-	
-		img {
-		    border-radius: 100% !important;
-		    width: 120px;
-		    height: 120px;
-		    border: 3px solid #000d1a;
-        margin-left: 5px;
-		}
-
-    
-
-		.details {
-        font-size: 4.5vw;
-        padding-left: 140px;
-       margin-top: -115px;
-		}
-
-		.ratings {
-			font-size: 5vw;
-			color: #000d1a;
-			padding-left: 140px;
-      margin-top: -10px;
-		}
-
-		.rate {
-			color: black;
-			font-weight: bolder;
-			position: relative;
-			display: inline;
-			padding-left: 5px;
-			font-size: 4.5vw;
-		}
-
-		a {
-			text-decoration: none;
-			color: inherit;
-		}
-
-		.btn {
-      margin-left: 140px;
-			font-size: 5.5vw;
-			background-color: #334d4d;
-	 		border-style: outset;
-	 		border-radius: 4px;
-	 		color: #FFFFF0;
-	 		margin-top: 10px;
-	 		margin-bottom: 10px;
-		}
-
-		.btn:hover {
-			opacity: 0.6;
-			color: #fff;
-		}
-
-		
-		  	 .search-container button {
-          margin-top: -50px;
-          margin-left: 450px;
-			    width: 50px;
-          text-align: center;
-          color: #fff;
-			    border: 1px solid #1f2e2e;
-          background-color: #000d1a;  
-			}
-
-
-		.scroller {
-			margin-left: auto;
-      margin-right: auto;
-      margin-top: 500px;
-		}
-
-		.previous {
-		  background-color: #FFFFF0;
-		  color: black;
-		  padding: 8px 16px;
-		  margin: 10px;
-		  border: 1px solid #000d1a;
-		}
-
-		.next {
-		  background-color: #000d1a;
-		  color: white;
-		  padding: 8px 16px;
-		  border: 1px solid #000d1a;
-		}
-
-		#search {
-			border: 1px solid #1f2e2e;
-		}
-
-		.icon {
-			color: #fff;
-		}
-
-		.filter{
-			position: relative;
-			display: inline-block;
-		}
-		.fa-star {
-			color: orange;
-		}
-
-		.details h3, .details h4 {
-      font-size: 4.5vw;
-    }
-
-    .scroller {
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-      margin-top: 10px;
-		}
-
-    .next {
-      margin-left: auto;
-			margin-right: auto;
-		  background-color: #000d1a;
-		  color: white;
-		  padding: 8px 16px;
-		  border: 1px solid #000d1a;
-		}
-
-	.btn a:hover {
-		color: #fff;
-		text-decoration: none;
+		*{box-sizing: border-box;}
+	body {
+		 background-color: #ffffff;
+  		font-family: Verdana, sans-serif; margin:0
 	}
 
-		@media only screen and (min-width: 481px) {
-			
-		.search-container {
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 10px;
-			width: 80%;
-		}
+	.jumbotron{
+		background-color: #f2f2f2;
+		height: 530px;
+		border: 1px solid #1f2e2e;
+		margin: 30px auto 20px auto;
+	}
 
-		input[type=text] {
-			padding: 6px;
-		  	margin-top: 8px;
-		  	font-size: 17px;
-		  	border: none;
-		  	width: 400px;
-		  	border-radius: 20px;
+	.jumbotron h2 {
+		font-size: 5.5vw;
+		margin-top: 20px;
+	}
 
-		}
+	.jumbotron p {
+		font-size: 5vw;
+		font-weight: bold;
+	}
 
-		#search:hover {
-			border: 1px solid #c3c3c3;
-		}
-
-		.search-container button {
-			padding: 6px 10px;
-			margin-top: 8px;
-		  	margin-right: 16px;
-		  	background: #ddd;
-		  	font-size: 17px;
-		  	border: none;
-		  	border-radius: 5px;
-		  	cursor: pointer;
-		  	background-color: #001a33;
-		}
-
-		.search-container button:hover {
-			background: #000000;
-		}
-
-
-		.column {
-			background-color: #f2f2f2;
-			width: 80%;
-			height: 275px;
-			margin-right: auto;
-			margin-left: auto;
-			border-radius: 5px;
-			padding-top: 10px;
-			margin-bottom: 25px;
-			border: 1px solid #1f2e2e;
-		}
-
-		img {
-		    width: 200px;
-		    height: 200px;
-		    border-radius: 100% !important;
-		    border: 3px solid #000d1a;
-		    margin: 10px;
-		}
-
-		.details {
-			font-size: 16px;
-			margin-left: 95px;
-			margin-top: -220px;
-		}
-
-		.ratings {
-			font-size: 20px;
-			color: #000;
-			margin-left: 95px;
-		}
-
-		.rate {
-			color: black;
-			font-weight: bolder;
+		.input-container {
+			display: -ms-flexbox;
+			display: flex;
+			width: 100%;
+			margin-bottom: 15px;
+			margin-top: 25px;
 			position: relative;
-			display: inline;
-			padding-left: 5px;
-			font-size: 20px;
+		}
+		
+		.input-field {
+			width: 85%;
+			 padding-left: 15px;
+			 outline: none;
+			 font-size: 4.5vw;
+			 font-family: Raleway;
+		}
+		
+		#input-field1 {
+			 padding: 15px;
+			 outline: none;
+			 width: 85%;
+			 font-size: 4.5vw;
+			 font-family: Raleway;
 		}
 
-		a {
-			text-decoration: none;
-			color: inherit;
+		#contain {
+			position: absolute;
+			bottom: 2px;
+			right: 40px;
+			width: 34px;
+			height: 50px;
+			cursor: pointer;
 		}
 
 		.btn {
-			margin-left: 235px;
-			font-size: 20px;
-			background-color: #334d4d;
-	 		border-style: outset;
-	 		border-radius: 4px;
-	 		color: #FFFFF0;
-	 		margin-top: 10px;
-	 		margin-bottom: 10px;
-	 		padding: 10px;
+   				width: 92%;
+   				color: #ffffff;
+  				background-color: #000d1a;
+   				padding: 15px;
+  				border: 1px solid #000000;
+   				font-size: 5vw;
+   				font-weight: bold;
+  				margin-bottom: 10px;
+  				margin-left: 2px;
+ 			}
+
+ .btn:hover {
+  opacity: 0.5;
+ }
+
+  		.icon{
+  		background-color: #334d4d;
+ 		 color: #ffffff;
+ 		 padding: 10px;
+		 min-width: 30px;
+		 text-align: center;
+		 padding-top: 15px;
+}
+
+	#input-field1:hover, .input-field:hover {
+			border:1px solid #000000;
+	}
+
+		.error {
+			color: red;
 		}
 
-		.details h3, .details h4 {
-			font-size: 18px;
+		.sign{
+	position: relative;
+	background-color: #003366;
+	width: 90px;
+	height: 100px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20%;
+}
+
+		.sign p{
+	font-size: 6.5vw;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 10px;
+}
+
+	#password-field {
+			 width: 100%;
+			 padding: 15px;
+			 outline: none;
+			 font-size: 5vw;
 		}
-		}
+
+	@media only screen and (max-width: 481px) {
+		body {background-color: #f2f2f2}
+		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 85%;}
+	}
+
+	@media only screen and (min-width: 481px) and (max-width: 1050px) {
+		body {background-color: #f2f2f2}
+		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 85%;}
+		.sign p{font-size: 50px;}
+		.btn, .input-field, #input-field1, .jumbotron p {font-size: 20px;}
+		.jumbotron h1 {font-size: 23px}
+	}
+
+	@media only screen and (min-width: 1051px) {
+		.btn, .input-field, #input-field1, .jumbotron p {font-size: 20px;}
+		.jumbotron h1 {font-size: 23px}
+	}
 		
 	</style>
 </head>
 <body>
-	<div class="page-header col-sm-12">
-			<a href="index.php">HUSSLA.NG</a>
-		</div>
+	<div class="sign"><p>H</p></div>
 
-
-	<main class="wrapper" id="wrapper">
-		<div class="result">
-		<p>Search Results For 'mujeeb'</p>
-		</div>
-
-				<span class="no-result"><p  style="text-align: center; font-size: 25px; margin-top: 70px;"><?php echo $message ?></p></span>
-				<script>
-					$(document).ready(function () {
-					if($('.no-result').text() === "No results.") {
-						$('.previous').hide();
-						$('.next').hide();
-					}
-					})
-				</script>
-
-			<div class="column">
-				<div class="image">
-					<img src="images/electrician.jpg">
-				</div>
-				
-				<div class="details" id="details">
-					<a href="#" id="name"><h3>Mujeeb Ademola</h3></a>
-					<h4>Professional haircuts</h4>
-					<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;30, Kazeem Street, Magodo</p>
-				</div>
-				<div class="ratings">
-					<span>Rating: 3.7<i class="fa fa-star"></i></span>
-				</div>
-
-				<button class="btn"><a href="profile.php?id=<?php echo $id ?>">Contact</a></button>
-			</div>
-
-			<div class="column">
-				<div class="image">
-					<img src="images/plumber.jpg">
-				</div>
-				
-				<div class="details" id="details">
-					<a href="#" id="name"><h3>John Akolade</h3></a>
-					<h4>Professional barbing</h4>
-					<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;23, Adediran Street, Magodo</p>
-				</div>
-				<div class="ratings">
-					<span>Rating: 4.2<i class="fa fa-star"></i></span>
-				</div>
-
-				<button class="btn"><a href="profile.php?id=<?php echo $id ?>">Contact</a></button>
-			</div>
-			
-			<center>
-			<div class="scroller">
-				<a href="#" class="previous">&laquo; </a>
-				<a href="#" class="next"> &raquo;</a>
-			</div>
-			</center>
+	<div class="jumbotron jumbotron-fluid form-group col-sm-6">
 		
-	</main>
+	<form name="details" action="<?php echo $next; ?>" style="max-width: 500px; margin: auto"  method="post">
+		<h2>Sign into your account</h2>
+		<br>
+		<p>E-MAIL:</p>
+		<div class="input-container">
+			<i class='fa fa-envelope icon'></i>
+			<input type="text" name="mail" placeholder="Enter e-mail address" class="input-field form-control" value="<?php echo $email; ?>">
+		</div>
+		<div class="error"><?php echo $emailErr; ?></div>
+		<br>
+		<p>PASSWORD:</p>
+		<div class="input-container">
+			<i class="fa fa-key icon"></i>
+			<input type="password" name="pass" placeholder="Enter password" id="input-field1" class="form-control" value="<?php echo $password; ?>">
+			<img src="Images/hidden.png" id="contain" onclick="myFunction()">
+		</div>
+		<div class="error"><?php echo $passwordErr; ?></div>
+		<br>
+		<input type="submit" class="btn" value="Login">
+	</form>
+	</div>
 
-
-	<footer>
-		
-	</footer>
+	<script>
+		function myFunction() {
+			var show = document.getElementById("input-field1");
+			if (show.type == "password") {
+				show.type = "text";
+			} else {
+				show.type = "password";
+			}
+		}
+	</script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
