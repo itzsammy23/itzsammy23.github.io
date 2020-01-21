@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -106,7 +109,6 @@
 
 #form {
 	margin-top: -70px;
-	
 }
 
 		.sign p{
@@ -126,8 +128,7 @@
 
 	@media only screen and (max-width: 480px) {
 		body {background-color: #f2f2f2}
-		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 100%;
-		}
+		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 100%}
 		#contain {
 			position: absolute;
 			bottom: 2px;
@@ -146,10 +147,11 @@
 
 	@media only screen and (min-width: 481px) and (max-width: 1050px) {
 		body {background-color: #f2f2f2}
-		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 85%;}
+		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 100%;}
 		.sign p{font-size: 50px;}
 		.btn, .input-field, #password-field, .jumbotron p {font-size: 20px;}
 		.jumbotron h2 {font-size: 23px}
+		#form {margin-right: 60px;}
 	}
 
 	@media only screen and (min-width: 1051px) {
@@ -160,10 +162,9 @@
 </style>
 </head>
 <body>
-	
 		<div class="sign"><p>H</p></div>
 		<div class="jumbotron jumbotron-fluid form-group col-sm-6" id="signin-form">
-	<form name="details" action="<?php echo $next; ?>" style="max-width: 500px; margin-left: 100px;"  method="post" id = "form" >
+	<form name="details" action="<?php echo $next; ?>" style="max-width: 500px; margin: auto;"  method="post" id = "form" >
 		<br><br>
 		<span id="sign-up"><a href="customersignup.php">Don't have an account? Sign Up Now</a></span>
 		<h2 >Sign into your account</h2>
