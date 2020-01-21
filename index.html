@@ -1,17 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset=utf-8>
+	<title></title>
 	<meta name=description content="">
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<title>Search Results for...</title>
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-	<style type="text/css">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
 		*{box-sizing: border-box;}
 	body {
 		 background-color: #ffffff;
@@ -52,17 +50,10 @@
 			 font-family: Raleway;
 		}
 		
-		#input-field1 {
-			 padding: 15px;
-			 outline: none;
-			 width: 85%;
-			 font-size: 4.5vw;
-			 font-family: Raleway;
-		}
-
+		
 		#contain {
 			position: absolute;
-			bottom: 2px;
+			bottom: -10px;
 			right: 40px;
 			width: 34px;
 			height: 50px;
@@ -113,18 +104,25 @@
 	border-radius: 20%;
 }
 
+#form {
+	margin-top: -70px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 		.sign p{
-	font-size: 19.5vw;
+	font-size: 50px;
 	color: #ffffff;
 	text-align: center;
 	padding-top: 10px;
 }
 
 	#password-field {
-			 width: 100%;
-			 padding: 15px;
+			width: 85%;
+			 padding-left: 15px;
 			 outline: none;
-			 font-size: 5vw;
+			 font-size: 4.5vw;
+			 font-family: Raleway;
 		}
 
 	@media only screen and (max-width: 480px) {
@@ -149,57 +147,60 @@
 		body {background-color: #f2f2f2}
 		.jumbotron {border: none; margin-left: auto; margin-right: auto; width: 85%;}
 		.sign p{font-size: 50px;}
-		.btn, .input-field, #input-field1, .jumbotron p {font-size: 20px;}
-		.jumbotron h1 {font-size: 23px}
+		.btn, .input-field, #password-field, .jumbotron p {font-size: 20px;}
+		.jumbotron h2 {font-size: 23px}
 	}
 
 	@media only screen and (min-width: 1051px) {
-		.btn, .input-field, #input-field1, .jumbotron p {font-size: 20px;}
-		.jumbotron h1 {font-size: 23px}
-		.btn {width: 100%;}
+		.btn, .input-field, #password-field, .jumbotron p {font-size: 20px;}
+		.jumbotron h2 {font-size: 23px}
 	}
 		
-	</style>
+</style>
 </head>
 <body>
-	<div class="sign"><p>H</p></div>
-
-	<div class="jumbotron jumbotron-fluid form-group col-sm-6">
-		
-	<form name="details" action="<?php echo $next; ?>" style="max-width: 500px; margin: auto"  method="post">
-		<h2>Sign into your account</h2>
+	
+		<div class="sign"><p>H</p></div>
+		<div class="jumbotron jumbotron-fluid form-group col-sm-6" id="signin-form">
+	<form name="details" action="<?php echo $next; ?>" style="max-width: 500px; margin-left: 100px;"  method="post" id = "form" >
+		<br><br>
+		<span id="sign-up"><a href="customersignup.php">Don't have an account? Sign Up Now</a></span>
+		<h2 >Sign into your account</h2>
 		<br>
 		<p>E-MAIL:</p>
 		<div class="input-container">
-			<i class='fa fa-envelope icon'></i>
-			<input type="text" name="mail" placeholder="Enter e-mail address" class="input-field form-control">
+			<i class='fa fa-envelope icon' id="envelope"></i>
+			<input type="text" name="mail" placeholder="Enter e-mail address" class="input-field">
 		</div>
 		<div class="error"><?php echo $emailErr; ?></div>
 		<br>
 		<p>PASSWORD:</p>
 		<div class="input-container">
 			<i class="fa fa-key icon"></i>
-			<input type="password" name="pass" placeholder="Enter password" id="input-field1" class="form-control">
-			<img src="images/hidden.png" id="contain" onclick="myFunction()">
+			<input type="password" name="pass" placeholder="Enter password" id="password-field">
+			<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password fa-2x" id="contain"></span>
 		</div>
 		<div class="error"><?php echo $passwordErr; ?></div>
 		<br>
-		<input type="submit" class="btn" value="Login">
+		<button type="submit" class="btn" name="Login">Login</button>
 	</form>
+	<br><br>
 	</div>
-
-	<script>
-		function myFunction() {
-			var show = document.getElementById("input-field1");
-			if (show.type == "password") {
-				show.type = "text";
-			} else {
-				show.type = "password";
-			}
-		}
-	</script>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<script>
+	
+  	$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
