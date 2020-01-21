@@ -12,7 +12,7 @@
 	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style type="text/css">
-		body {
+			body {
 			background-color: #ffffff;
 			font-family: Raleway; 
 			margin:0;
@@ -31,7 +31,6 @@
 			text-decoration: none;
 			text-align: center;
 		}
-
 
 		.search-container {
 			margin-left: 0px;
@@ -63,12 +62,14 @@
 		}
 
 
-		.jumbotron {
+		.column {
 			background-color: #f2f2f2;
+			width: 80%;
 			height: 216px;
-			margin: 10px;
+			margin: auto;
 			border-radius: 5px;
-			padding-top: 20px;
+			padding-top: 10px;
+			margin-bottom: 25px;
 			border: 1px solid #1f2e2e;
 		}
 
@@ -123,6 +124,7 @@
 
 		.btn:hover {
 			opacity: 0.6;
+			color: #fff;
 		}
 
 		
@@ -170,35 +172,6 @@
 			position: relative;
 			display: inline-block;
 		}
-
-		.dropdown-content{
-			display: none;
-			position: absolute;
-			background-color: #fff;
-			min-width: 150px;
-			box-shadow:0px 8px 16px 0px;
-			z-index: 1;
-			margin-left: 1065px;
-			opacity: 0.9;
-		}
-
-		.dropdown-content p {
-			color: #000000;
-			padding: 2px 6px;
-			text-decoration: none;
-			display: block;
-			width: 90%;
-			max-height: 25px;
-			font-size: 20px;
-		}
-
-		.dropdown-content p:hover {
-			background-color: #800000;
-			color: #fff;
-		}
-
-		.show{display: block;}
-
 		.fa-star {
 			color: orange;
 		}
@@ -222,6 +195,13 @@
 		  padding: 8px 16px;
 		  border: 1px solid #000d1a;
 		}
+
+	.btn a:hover {
+		color: #fff;
+		text-decoration: none;s
+	}
+
+		
 	</style>
 </head>
 <body>
