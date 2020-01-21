@@ -71,7 +71,7 @@
 		}
 
 
-		.column {
+		.jumbotron {
 			background-color: #f2f2f2;
 			width: 80%;
 			height: 250px;
@@ -92,14 +92,14 @@
 		    overflow: hidden;
 		    align-content: center;
 		    justify-content: center;
-		    width: 200px;
-		    height: 200px;
+		    width: 50px;
+		    height: 50px;
 		    border: 3px solid #000d1a;
 		    margin: 10px;
 		}
 
 		.details {
-			margin-left: 25%;
+      float: right;
 			margin-top: -190px;
 		}
 
@@ -139,12 +139,8 @@
 			opacity: 0.6;
 		}
 
-		@media screen and (max-width: 600px) {
-			.search-container {
-				float: none;
-			}
-
-		  	input[type=text .search-container button] {
+		
+		  	 .search-container button {
 			    display: block;
 			    text-align: left;
 			    width: 100%;
@@ -224,23 +220,6 @@
 			color: orange;
 		}
 
-		@media only screen and (min-width: 480px) and (max-width: 650px) {
-			.column {height: 250px; width: 460px}
-			.image {width: 170px; height: 170px; margin-top: 30px}
-			.fa-filter {float: left; left: 450px; top: 70px;}
-			.details {padding-left: 90px; padding-top: 10px}
-			.ratings {padding-left: 90px}
-			.btn {margin-left: 210px}
-		}
-
-		@media only screen and (min-width: 651px) {
-			.details, .ratings, .btn {margin-left: 240px}
-		}
-
-		.details h3, .details h4 {
-			font-size: 18px;
-		}
-
 		
 	</style>
 </head>
@@ -250,7 +229,7 @@
 		</div>
 
 
-	<main class="wrapper" id="wrapper">
+	
 		<div class="search-container">
 		    <form action="searchresult.php" method="GET">
 		      <input type="text" placeholder="Search.." name="value" id="search">
@@ -258,11 +237,11 @@
 		    </form>
 		</div>
 
-		</div>
-			<div class="column">
-				<div class="image">
-					<img src="images/plumber.jpg">
-				</div>
+    </div>
+    <div class="container">
+      <div  class="row">
+			<div class="jumbotron jumbotron-fluid col-sm-12">
+					<img src="images/plumber.jpg" class="float-left">
 				
 				<div class="details" id="details">
 					<h3>John Adegboyega</h3>
@@ -275,20 +254,14 @@
 
 				<button class="btn"><a href='profile.php?id=<?php echo $id ?>'>Contact</a></button>
 			</div>
-			<?php
-
-				}
-	}
-
-				 ?>
 			
 			<center>
 			<div class="scroller">
 				<a href="nextpage.php?id=<?php echo $id ?>" class="next" align="center"> &raquo;</a>
 			</div>
 			</center>
-		
-	</main>
+    </div>
+    </div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
