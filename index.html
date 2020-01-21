@@ -1,514 +1,432 @@
 <?php 
-  session_start();
-?> 
+	session_start();
+?>
+
+
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "sam987412admin10";
+	$dbname = "users";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+	$service = $state = $area = "";
+	$result = $row = $folder = "";
+	$folder = "uploads/";
+	$firstname = $lastname = $bizmotto = $bizaddr = $bizname = $bizinfo = $rating = $votecount = "";
+	if (isset($_GET["submit"])) {
+		$service = $_GET["Service"];
+		$state = $_GET["State"];
+		$area = $_GET["Area"];
+		$uService = ucfirst($service);
+		$uState = ucfirst($state);
+		$uArea = ucfirst($area);
+
+		 if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Ikorodu") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Ikorodu'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Magodo") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Magodo' LIMIT 5";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Abule-Oja") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Abule-Oja'";
+			$result = $conn->query($sql);
+		} else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Alapere") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Alapere'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Akoka") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Akoka'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Alago-meji") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Alago-meji'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Alausa") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Alausa'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Bariga") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Bariga'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Fadeyi") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Fadeyi'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Ikosi") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Ikosi'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Ikeja") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Ikeja'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Isolo") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Isolo'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Ketu") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Ketu'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Mile 12") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Mile 12'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Mile 2") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Mile 2'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Lekki") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Lekki'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Obanikoro") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Obanikoro'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Opebi") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Opebi'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Palmgrove") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Palmgrove'";
+			$result = $conn->query($sql);
+		}else if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Yaba") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Haircuts' AND area = 'Yaba'";
+			$result = $conn->query($sql);
+		}
+		if ($uService == "Hair Stylist" && $uState == "Lagos" && $uArea == "Magodo") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Hair Styling' AND area = 'Magodo'";
+			$result = $conn->query($sql);
+		}
+
+		if ($uService == "Barber" && $uState == "Lagos" && $uArea == "Surulere") {
+			$sql = "SELECT id, firstname, lastname, bizname, bizinfo, bizaddr, bizmotto, image, rating, votecount FROM Husslaz WHERE  specialize = 'Electronics' AND area = 'Surulere'";
+			$result = $conn->query($sql);
+		}
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset=utf-8>
-  <meta name=description content="">
-  <meta name=viewport content="width=device-width, initial-scale=1">
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Search Results for...</title>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<title>Here to serve you better - Hussla.ng</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <style type="text/css">
-    * {box-sizing: border-box}
-body {
-  background-color: #ffffff;
-  font-family: Raleway;
-  margin:0
-}
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+			background-color: #ffffff;
+			font-family: Raleway; 
+			margin:0;
+		}
+		.page-header {
+			background-color: #000d1a;
+			text-align: center;
+			height: 60px;
+			padding-top: 0px;
+			font-size: 45px;
+			font-weight: bold;
+		}	
 
-h2 {
-  color: #000000;
-  font-family: Raleway;
-}
-.mySlides {display: none}
-img {vertical-align: middle;
-    height: 200px;
-    max-width: 1000px;
-    margin-top: 40px;
-    }
-
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: 30px;
-}
+		.page-header a {
+			color: #FFFFF0;
+			text-decoration: none;
+			text-align: center;
+		}
 
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: 2px;
-  color: white;
-  font-weight: bold;
-  font-size: 3.5vw;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+		.search-container {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 10px;
+			width: 80%;
+		}
+
+		input[type=text] {
+			padding: 6px;
+		  	margin-top: 8px;
+		  	font-size: 17px;
+		  	border: none;
+		  	width: 400px;
+		  	border-radius: 20px;
+
+		}
+
+		#search:hover {
+			border: 1px solid #c3c3c3;
+		}
+
+		.search-container button {
+			padding: 6px 10px;
+			margin-top: 8px;
+		  	margin-right: 16px;
+		  	background: #ddd;
+		  	font-size: 17px;
+		  	border: none;
+		  	border-radius: 5px;
+		  	cursor: pointer;
+		  	background-color: #001a33;
+		}
+
+		.search-container button:hover {
+			background: #000000;
+		}
 
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+		.column {
+			background-color: #f2f2f2;
+			width: 80%;
+			height: 250px;
+			margin: auto;
+			border-radius: 5px;
+			padding-top: 10px;
+			margin-bottom: 25px;
+			border: 1px solid #1f2e2e;
+		}
 
+		img {
+		    max-width: 100%;
+		    height: 100%;
+		}
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+		.image {
+		    border-radius: 100% !important;
+		    overflow: hidden;
+		    align-content: center;
+		    justify-content: center;
+		    width: 200px;
+		    height: 200px;
+		    border: 3px solid #000d1a;
+		    margin: 10px;
+		}
 
+		.details {
+			margin-left: 25%;
+			margin-top: -190px;
+		}
 
-.text {
-  color: #000d1a;
-  font-size: 3.5vw;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+		.ratings {
+			font-size: 25px;
+			color: #ff9900;
+			margin-left: 25%;
+		}
 
+		.rate {
+			color: black;
+			font-weight: bolder;
+			position: relative;
+			display: inline;
+			padding-left: 5px;
+			font-size: 20px;
+		}
 
-.numbertext {
-  color: #000d1a;
-  font-size: 4vw;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  margin-top: 40px;
-}
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
 
+		.btn {
+			margin-left: 25%;
+			font-size: 20px;
+			background-color: #334d4d;
+	 		border-style: outset;
+	 		border-radius: 4px;
+	 		color: #FFFFF0;
+	 		margin-top: 10px;
+	 		margin-bottom: 10px;
+	 		padding: 10px;
+		}
 
-.dot {
-  cursor: pointer;
-  height: 2.5vw;
-  width: 2.5vw;
-  margin: 6 2px;
-  background-color: #c3c3c3;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+		.btn:hover {
+			opacity: 0.6;
+		}
 
- .dot:hover {
-  background-color: #6699ff;
-}
+		@media screen and (max-width: 600px) {
+			.search-container {
+				float: none;
+			}
 
-.active{
-  background-color: #000d1a;
-}
+		  	input[type=text .search-container button] {
+			    display: block;
+			    text-align: left;
+			    width: 100%;
+			    margin: 0;
+			    padding: 14px;
+			    border: 1px solid #1f2e2e;  
+			}
 
+			input[type=text] {
+				border: 1px solid #1f2e2e;  
+			}
+		}
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+		.scroller {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+		.previous {
+		  background-color: #FFFFF0;
+		  color: black;
+		  padding: 8px 16px;
+		  margin: 10px;
+		  border: 1px solid #000d1a;
+		}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+		.next {
+		  background-color: #000d1a;
+		  color: white;
+		  padding: 8px 16px;
+		  border: 1px solid #000d1a;
+		}
 
-.welcome {
-    font-size: 4.5vw;
-    color: #fff;
-    font-family: Raleway;
-    position: absolute;
-    top: 25px;
-    font-weight: bold;
-    left: 400px;
-}
+		#search {
+			border: 1px solid #1f2e2e;
+		}
 
-.service{
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 15px;
-    width: 100%;
-    position: relative;
-}
+		.icon {
+			color: #fff;
+		}
 
-.icon{
-  background: black;
-  color: #ffffff;
-  padding: 10px;
-  min-width: 50px;
-  text-align: center;
-}
+		.filter{
+			position: relative;
+			display: inline-block;
+		}
 
-#input-service, #input-state, #input-area {
-      width: 100%;
-      padding: 10px;
-      outline: none;
-}
+		.dropdown-content{
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			min-width: 150px;
+			box-shadow:0px 8px 16px 0px;
+			z-index: 1;
+			margin-left: 1065px;
+			opacity: 0.9;
+		}
 
-.btn {
-   width: 100%;
-   color: #ffffff;
-   background-color: #000d1a;
-   opacity: 0.8;
-   padding: 15px;
-   border: 1px solid #000000;
-   font-size: 4vw;
-   font-weight: bold;
-   margin-bottom: 10px;
- }
+		.dropdown-content p {
+			color: #000000;
+			padding: 2px 6px;
+			text-decoration: none;
+			display: block;
+			width: 90%;
+			max-height: 25px;
+			font-size: 20px;
+		}
 
- .btn:hover {
-  opacity: 0.5;
- }
+		.dropdown-content p:hover {
+			background-color: #800000;
+			color: #fff;
+		}
 
- #entry {
-    max-width:900px; 
-    background-color: #f2f2f2;
-    margin-top: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #1f2e2e;
-    float: none;
- }
+		.show{display: block;}
 
- #entry h2 {
-  font-size: 4.5vw;
- }
+		.fa-star {
+			color: orange;
+		}
 
- #entry:hover {
-      border: 2px solid #c3c3c3;
- }
+		@media only screen and (min-width: 480px) and (max-width: 650px) {
+			.column {height: 250px; width: 460px}
+			.image {width: 170px; height: 170px; margin-top: 30px}
+			.fa-filter {float: left; left: 450px; top: 70px;}
+			.details {padding-left: 90px; padding-top: 10px}
+			.ratings {padding-left: 90px}
+			.btn {margin-left: 210px}
+		}
 
- .service-items {
-    position: absolute;
-    border: 1px solid #000000;
-    border-top: none;
-    border-bottom: none;
-    z-index: 99;
-    top: 100%;
-    left: 0;
-    right: 0;
- }
+		@media only screen and (min-width: 651px) {
+			.details, .ratings, .btn {margin-left: 240px}
+		}
 
- .service-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border-bottom:1px solid #000000;
-    font-size: 5vw;
- }
+		.details h3, .details h4 {
+			font-size: 18px;
+		}
 
- .service-items div:hover {
-    background-color: #999999;
- }
-
- .service-active {
-  background-color: #b3b3b3 !important;
-  color: #ffffff;
- }
-
- input[type=text] {
-    width: 500px;
-    font-size: 4.5vw;
-    font-family: Raleway;
- }
-
- input[type=text]:hover {
-      border: 2px solid #a6a6a6;
- }
-
-.dropdown-content {
-      position: absolute;
-      display: none;
-      background-color: #ffffff;
-      width: 90%;
-      box-shadow: rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      margin-top: 47px;
-}
-
-.navbar {
-    background-color: #000d1a !important;
-  }
-
-  .navbar .navbar-text {
-    color: #fff;
-    font-size: 4.5vw;
-  }
-
-  .navbar .navbar-nav li a{
-    color: #fff !important;
-  }
-
-  .navbar .navbar-nav li a:hover {
-    background-color: #f2f2f2;
-    color: #000000 !important;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  .navbar-toggler {
-    border: 3px solid #f2f2f2;
-  }
-
-.dropdown-content p {
-      color: #000000;
-      padding: 12px 12px;
-      display: inline-block;
-      width: 95%;
-      margin-left: 10px;
-}
-
-.dropdown-content p:hover {
-      background-color: #e6e6e6;
-}
-
-.show{display: block;}
-
-@media only screen and (min-width: 481px) {
-           .navbar .navbar-text,  .service-items div, .text, #entry h2 { font-size: 20px; }
-            input[type=text] { font-size: 17px }
-            .numbertext {font-size: 12px }
-            .welcome {font-size: 25px}
-			#entry h1 {font-size: 30px;}
-			.slideshow-container {margin: 60px auto auto auto}
-           img {height: 400px}
-		 	.dot {  height: 15px;width: 15px; }
-}
-  </style>
+		
+	</style>
 </head>
 <body>
-
-	<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
-      <span class="navbar-text">Welcome John Adegboyega</span>
-      <button class="toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon" ></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="customersignin.php" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="customersignup.php" class="nav-link">Sign In(Customer)</a></li>
-          </ul>
-        </div>
-    </nav>
-
-	<div class="slideshow-container" style="animation-delay: 500ms">
-	
-	<div class="mySlides fade">
-	<div class="numbertext">1 / 3</div>
-	<img src="images/electrician.jpg" alt="An Electrician at work" style="width: 100%">
-	<div class="text">Get whatever help you need</div>
-	</div>
-
-	<div class="mySlides fade">
-	<div class="numbertext">2 / 3</div>
-	<img src="images/plumber.jpg" alt="A plumber at work" style="width: 100%">
-	<div class="text">Right from the comfort of your home</div>
-	</div>
-
-	<div class="mySlides fade">
-	<div class="numbertext">3 / 3</div>
-	<img src="images/building.jpg" alt="A building engineer smiling at work" style="width: 100%">
-	<div class="text">Easy, straightforward, no stress</div>
-	</div>
-
-	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-	<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-	</div>
-	<br>
-
-	<div style="text-align: center">
-		<span class="dot" onclick="currentSlide(1)"></span>
-		<span class="dot" onclick="currentSlide(2)"></span>
-		<span class="dot" onclick="currentSlide(3)"></span>
-		
-	</div>
-	&nbsp;<br>
-	&nbsp;<br>
-	&nbsp;<br>
-	&nbsp;<br>
-	&nbsp;<br>
-	
-	<div id="entry">
-	<form action="search.php" style="max-width: 500px; margin: auto;" autocomplete="off" method="get" name="select" id="select" onsubmit="return check()">
-		<h1 style="color: #003366; font-size: 6vw; font-weight: bold">What service might you be looking for today?</h1>
-
-		<div class="service">
-			<input type="text" name="Service" placeholder="Services" id="input-service" >
+		<div class="page-header col-sm-12">
+			<a href="index.php">HUSSLA.NG</a>
 		</div>
-			<br>
-    <h2>State:</h2>
-        <div class="service">
-      <input list="states" type="text" name="State" placeholder="Enter State" id="input-state">
-    </div>
-      <br>
-    <h2>Area:</h2>
-        <div class="service">
-      <input type="text" name="Area" placeholder="Area..." id="input-area" autocomplete="on" >
-    </div>
 
 
-			<button type="submit" name="submit" class="btn">SEARCH</button>
-	</form>
-	</div>
-	<script>
-		var slideIndex = 1;
-	showSlides(slideIndex);
+	<main class="wrapper" id="wrapper">
+		<div class="search-container">
+		    <form action="searchresult.php" method="GET">
+		      <input type="text" placeholder="Search.." name="value" id="search">
+		      <button type="submit" name="search"><i class="fa fa-search icon"></i></button>
+		    </form>
+		</div>
 
-	function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+		</div>
+			<div class="column">
+				<div class="image">
+					<img src="images/plumber.jpg">
+				</div>
+				
+				<div class="details" id="details">
+					<h3>John Adegboyega</h3>
+					<h4>Professional Haircuts</h4>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;30, Johnson Street, Magodo</p>
+				</div>
+				<div class="ratings" id="ratings">
+					<p class="rate" id="rate">Rating: <span id="avgRating">3.8<span><span class="star"><i class="fa fa-star"></i></span></p>
+				</div>
 
-	function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+				<button class="btn"><a href='profile.php?id=<?php echo $id ?>'>Contact</a></button>
+			</div>
+			<?php
 
-	function showSlides(n) {
-  					var i;
-	 				 var slides = document.getElementsByClassName("mySlides");
-	 				 var dots = document.getElementsByClassName("dot");
-  					if (n > slides.length) {slideIndex = 1}    
-  					if (n < 1) {slideIndex = slides.length}
-  			for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  			for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+				}
+	}
 
-  setInterval(function() {
-      plusSlides(1);
-  }, 3000);
-
-	function autocomplete(inp, arr) {
-  var currentFocus;
-  inp.addEventListener("input", function(e) {
-      var a, b, i, val = this.value;
-      closeAllLists();
-      if (!val) { return false;}
-      currentFocus = -1;
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "service-list");
-      a.setAttribute("class", "service-items");
-      this.parentNode.appendChild(a);
-      for (i = 0; i < arr.length; i++) {
-        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-          b = document.createElement("DIV");
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].substr(val.length);
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          b.addEventListener("click", function(e) {
-              inp.value = this.getElementsByTagName("input")[0].value;
-              closeAllLists();
-          });
-          a.appendChild(b);
-        }
-      }
-  });
-  inp.addEventListener("keydown", function(e) {
-      var x = document.getElementById(this.id + "service-list");
-      if (x) x = x.getElementsByTagName("div");
-      if (e.keyCode == 40) {
-        currentFocus++;
-        addActive(x);
-      } else if (e.keyCode == 38) {
-        currentFocus--;
-        addActive(x);
-      } else if (e.keyCode == 13) {
-        e.preventDefault();
-        if (currentFocus > -1) {
-          if (x) x[currentFocus].click();
-        }
-      }
-  });
-  function addActive(x) {
-    if (!x) return false;
-    removeActive(x);
-    if (currentFocus >= x.length) currentFocus = 0;
-    if (currentFocus < 0) currentFocus = (x.length - 1);
-    x[currentFocus].classList.add("service-active");
-  }
-  function removeActive(x) {
-    for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove("service-active");
-    }
-  }
-  function closeAllLists(elmnt) {
-    var x = document.getElementsByClassName("service-items");
-    for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
-        x[i].parentNode.removeChild(x[i]);
-      }
-    }
-  }
-  document.addEventListener("click", function (e) {
-      closeAllLists(e.target);
-  });
-}
-
-var service = ["AC Repairman", "Barber", "Babysitter", "Carpenter", "Cook", "Electrician","Event Planner", "Housekeeper", "Hair Stylist","Mechanic", "Phone Repairman", "Photographer", "Plumber", "Tailor", "TV Repairman"]
-
-var states = ["Abia","Adamawa","Akwa Ibom","Anambra","Bauchi","Bayelsa","Benue","Borno","Cross River","Delta","Ebonyi","Enugu","Edo","Ekiti","FCT - Abuja","Gombe","Imo","Jigawa","Kaduna","Kano","Katsina","Kebbi","Kogi","Kwara","Lagos","Nasarawa","Niger","Ogun","Ondo","Osun","Oyo","Plateau","Rivers","Sokoto","Taraba","Yobe","Zamfara"]
-
-var area = ["Abule-Oja", "Alapere", "Akoka", "Alago-meji", "Alausa", "Bariga", "Fadeyi", "Ikosi", "Ikeja", "Ikorodu", "Isolo", "Ketu", "Magodo", "Mile 12","Mile 2", "Lekki", "Obanikoro", "Opebi", "Palmgrove", "Surulere", "Yaba"]
-
-autocomplete(document.getElementById("input-state"), states);
-autocomplete(document.getElementById("input-service"), service);
-autocomplete(document.getElementById("input-area"), area);
+				 ?>
+			
+			<center>
+			<div class="scroller">
+				<a href="nextpage.php?id=<?php echo $id ?>" class="next" align="center"> &raquo;</a>
+			</div>
+			</center>
+		
+	</main>
 
 
-function dropDown () {
-  document.getElementById("Dropdown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if(!event.target.matches(".icon")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-
-    for (i = 0; i < dropdowns.length; i++) {
-      var DropDown = dropdowns[i];
-      if(DropDown.classList.contains('show')) {
-        Dropdown.classList.remove('show');
-      }
-    }
-  }
-}
-   
- function check() {
-  var service = document.forms["select"]["Service"].value;
- var state = document.forms["select"]["State"].value;
- var area = document.forms["select"]["Area"].value;
-
- if (service == "" || state == "" || area == "") {
-  alert("Please fill out the form");
-  return false;
- }
- }
-
-
-	</script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<script>
+	$(document).ready(function () {
+	if($('.avgRating').text() === "Not Rated") {
+			$('.fa-star').hide();
+		}
+	})
+	
+
+	/*function drop() {
+		document.getElementById("dropdown").classList.toggle("show");
+	}
+
+	function sort() {
+		var list, i, switching, b, shouldSwitch;
+		list = document.getElementById("details");
+		switching = true;
+
+		while(switching) {
+			switching = false;
+			b = list.getElementsById("names");
+			for (i = 0; i < (b.length - 1); i++) {
+				shouldSwitch = false;
+				if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+			if (shouldSwitch) {
+				b[i].parentNode.insertBefore(b[i + 1], b[i]);
+				switching = true;
+			}
+		}
+	}*/
+
+</script>
 </html>
-
-
