@@ -66,7 +66,7 @@
 
 		.jumbotron {
 			background-color: #f2f2f2;
-			height: 230px;
+			height: 216px;
 			margin: 10px;
 			border-radius: 5px;
 			padding-top: 20px;
@@ -207,6 +207,19 @@
 		.details h3, .details h4 {
       font-size: 4.5vw;
     }
+
+    .scroller {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+
+    .next {
+		  background-color: #000d1a;
+		  color: white;
+		  padding: 8px 16px;
+		  border: 1px solid #000d1a;
+		}
 	</style>
 </head>
 <body>
@@ -239,6 +252,10 @@
 
 				<button class="btn"><a href='profile.php'>Contact</a></button>
 			</div>
+    </div>
+
+    <div class="scroller">
+      <a href="nextpage.php?id=<?php echo $id ?>" class="next"> &raquo;</a>
     </div>
     </div>
 
