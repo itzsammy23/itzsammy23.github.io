@@ -1,100 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- Scripts -->
+    <script src="app.js" defer></script>
+    <script src="signup.js'" defer></script>
+    <script src="https://kit.fontawesome.com/ee654fe705.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="profile.js'" defer></script>
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
+    <!-- Styles -->
+    <link href="app.css" rel="stylesheet">
+    <link href="signupstyle.css" rel="stylesheet">
+    <link href="indexstyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/font-awesome.min.css">
+</head>
+<body style="background-image: url('tools-2145770_1280.jpg')">
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     Hussla
-                </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="links">
-                    <a href="/customer/login">Login (Customer)</a>
-                    <a href="/customer/register">Register (Customer)</a>
-                    <a href="/servicefinder">Find a Hussla</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">FAQ</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Terms and Conditions</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+                            
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                                </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/customer/register">Register (Customer)</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/customer/login">Login (Customer)</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" 
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    JOHN <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            
+                    </ul>
                 </div>
             </div>
-        </div>
-    </body>
+        </nav>
+
+<div class="container ">
+    <div class="row justify-content-center align-items-center">
+        <div class="form-file col-md-10" >
+                    <form method="GET" action="/search/result" onsubmit="return check();" name="select" id="select">
+            
+                        <div class="search-content">
+                        <div class="form-group row d-block offset-2 pr-5 pt-3" >
+                            <label for="service" class="heading col-md-12">What service might you be looking for today?</label>
+                            <div class="col-md-9">
+                                <input id="input-service" type="text" class="form-control @error('service')
+                                 is-invalid @enderror" name="service" 
+                                 required autocomplete="service" placeholder="Services..." autofocus>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row d-block offset-2 pr-5 pt-3" >
+                            <label for="state" class="small-header col-md-4">State</label>
+                            <div class="col-md-9">
+                                <input id="input-state" type="text" class="form-control @error('state')
+                                 is-invalid @enderror" name="state" 
+                                 required autocomplete="state" placeholder="Your state of residence.." autofocus>
+                            </div>
+                        </div>
+                      
+
+                        <div class="form-group row d-block offset-2 pr-5 pt-3">
+                            <label for="area" class="small-header col-md-4 col-form-label">Area</label>
+            
+                            <div class="col-md-9">
+                                <input id="input-area" type="area" class="form-control @error('area') 
+                                is-invalid @enderror" name="area" 
+                                 required autocomplete="area" placeholder="Your area..">
+                                <span id="error-area" class="error"></span>
+                            </div>
+                        </div>
+
+                        <div class="find row offset-2 pb-5">
+                            <div class="col-md-6">
+                                <button class="btn" type="submit">SEARCH</button>
+</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+</div>
+</body>
 </html>

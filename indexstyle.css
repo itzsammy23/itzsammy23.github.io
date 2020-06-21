@@ -1,0 +1,346 @@
+
+.btn {
+    background-color: #000d1a;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #fff;
+    border: 1.5px solid #000d1a;
+    color: #000d1a;
+    font-weight: bold;
+}
+
+ .row h2  {
+    font-weight: bold;
+}
+
+.caption {
+    color: #000;
+    font-weight: bold;
+}
+
+.select-option {
+        width: 100%;
+        height: calc(1.6em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.6;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+}
+
+.select-option .option-value:hover{
+            color: #fff;
+            background-color: #0059b3;
+            border: none;
+}
+  
+  .verify-container {
+      padding-top: 4%;
+  }
+
+  .last-step {
+      text-align:center;
+      font-size: 35px;
+      font-weight: bold;
+      color: #000000;
+  }
+
+  .verify-content {
+      padding-top : 5px;
+      text-align: center;
+      font-size: 20px;
+  }
+
+ .mail-image img{
+     width: 200px;
+     height: 200px;
+ }
+
+
+ .content {
+     background-color: #f2f2f2;
+ }
+ 
+ .content .profile-image img{
+     width: 200px;
+     height: 200px;
+ }
+
+ .content h2 {
+     text-align: center;
+ }
+ 
+ .content .content-text, .comments a {
+     text-align: center;
+ }
+
+ .content .content-text p {
+     font-size: 20px;
+ }
+
+ .fa-star, .fa-map-marker-alt, .fa-pied-piper, .fa-building, .fa-phone-alt {
+    color: orange;
+    font-size: 25px;
+}
+
+.fa-sign-in-alt {
+    color: #fff;
+    font-size: 15px;
+}
+
+.view-all-comments, .edit {
+    font-size: 20px;
+    text-align: center;
+}
+
+.view-all-comments a, .edit a {
+    text-decoration: none;
+    color: #000d1a;
+    font-weight: bold;
+}
+
+.view-all-comments a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.edit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #000d1a;
+    padding: 15px;
+}
+
+.edit a:hover {
+    background-color: #f2f2f2;
+    color: #000d1a;
+    border: 2px solid #000d1a;
+    border-radius: 25px;
+}
+
+.profile-image img, .card-body img {
+   width: 200px;
+   height: 200px;
+}
+
+.container .image-upload-form {
+    padding-left: 32%;
+}
+
+.image-upload-form .custom-file {
+    display: inline-block;
+    padding-top: 5px;
+    cursor: pointer;
+    width: 200px;
+    height: 43px;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #000d1a;
+    border: 2px solid #000d1a;
+    font-size: 18px;
+  }
+
+  
+  input[type="file"] {
+    display: none;
+  }
+
+  .upload {
+    width: 200px;
+    height: 40px;
+    background-color: #334d4d;
+    color: #ffffff;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  } 
+
+  .upload-button {
+    background-color: #000d1a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 2px 8.5px 1px 8.5px;
+    height: 44px;
+    width: 30%;
+    font-weight: bold;
+    margin-left: -5px;
+  }
+  @media screen and (max-width: 800px) {
+    .container .image-upload-form {
+        padding-left: 20%;
+    }
+
+    .profile-image img, .card-body img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .details h4{
+        font-size: 16px;
+    }
+    .card-body img {
+        width: 30%;
+    }
+
+    .search-result {
+        width: 70%;
+    }
+
+    #parameter {
+        width: 80%;
+    }
+
+    .find button {
+        width: 88%;
+    }
+
+
+  }
+
+  .service-items {
+    position: absolute;
+    border: 1px solid #000000;
+    border-top: none;
+    border-bottom: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 95%;
+    margin-left: 15px;
+ }
+
+ .service-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-bottom:1px solid #000000;
+    font-size: 15px;
+ }
+
+ .service-items div:hover {
+    background-color: #999999;
+ }
+
+ .service-active {
+  background-color: #b3b3b3 !important;
+  color: #ffffff;
+ }
+
+ .heading{
+     font-size: 25px;
+     font-weight: bold;
+     color: #ffffff;
+ }
+
+ .small-header {
+     font-size: 22px;
+     font-weight: bold;
+     color: #ffffff;
+ }
+
+  .search-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .result-content {
+    background-color: #f2f2f2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:1px solid #000d1a;
+    }
+
+    .search-result .name {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .search-result .info {
+        font-size: 16px;
+    }
+
+    .search-result .address {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .location {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000d1a;
+    }
+
+    .location a {
+        color: #000d1a;
+    }
+
+    #address {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .contact .fa-phone-alt  {
+        font-size: 50px;
+    }
+    .contact .fa-sms {
+        font-size: 80px;
+    }
+
+    .contact .fa-phone-alt {
+        color: red;
+        border: 2px solid red;
+        padding: 20px;
+        border-radius: 50%;
+    }
+
+    .search-btn {
+        background-color: #000d1a;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .search-btn:hover {
+        background-color: #fff;
+        border: 1.5px solid #000d1a;
+        color: #000d1a;
+        font-weight: bold;
+    }
+
+    .comment textarea {
+        width: 100%;
+        height: 200px;
+        padding: 0.375rem 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .comment label {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    
+   
+    
+
+    
