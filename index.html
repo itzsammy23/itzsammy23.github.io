@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Hussla - Laravel remake</title>
 
     <!-- Scripts -->
     <script src="app.js" defer></script>
@@ -27,7 +27,7 @@
     <link href="indexstyle.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/font-awesome.min.css">
 </head>
-<body style="background-image: url('tools-2145770_1280.jpg')">
+<body style="background-color: #f2f2f2;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -86,7 +86,7 @@
             </div>
         </nav>
 
-<div class="container ">
+<!--<div class="container ">
     <div class="row justify-content-center align-items-center">
         <div class="form-file col-md-10" >
                     <form method="GET" action="/search/result" onsubmit="return check();" name="select" id="select">
@@ -122,14 +122,163 @@
                             </div>
                         </div>
 
-                        <div class="find row offset-2 pb-5">
+                        <div class="row offset-2 pb-5">
                             <div class="col-md-4">
                                 <button class="btn" type="submit">SEARCH</button>
-</div>
+                            </div>
+                            </div>
                     </div>
                     </div>
                 </div>
             </div>
+</div>-->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="form-group row d-flex offset-2 search-field">
+            <form method="GET" action="/find/user" style="width: 80%">
+            <div class="col-md-10 d-flex">
+            <input id="parameter" type="parameter" class="form-control col-md-8 @error('parameter') is-invalid @enderror"
+             name="parameter" value="{{ old('parameter') }}" required autocomplete="parameter" placeholder="Search for a business or service provider" autofocus>
+             <button type="submit" name="search" class="search-btn ml-2"><i class="fas fa-search icon"></i></button>
 </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4" style="border-radius: 20px;">
+                <div class="card-body">
+                    <div class="row">
+                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
+                        <div class="search-result col-md-6">
+                            <div class="name pt-2">Gbolahan Ajirebi</div>
+                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
+                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
+                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
+                            </div>
+
+                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+</div>    
+</body>
+
 </body>
 </html>
