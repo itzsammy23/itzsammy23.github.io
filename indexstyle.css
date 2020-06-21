@@ -353,7 +353,8 @@
         }
 
         .find button {
-            width: 90%;
+            width: 50%;
+            padding-right: 9px;
         }
 
         .heading, .small-header {
