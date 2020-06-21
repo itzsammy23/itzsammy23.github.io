@@ -338,6 +338,29 @@
         font-size: 20px;
         font-weight: bold;
     }
+
+     @media screen and (min-width: 200px) and (max-width: 600px) {
+        .search-result .name {
+            font-size: 15px;
+        }
+
+        .search-result .info {
+            font-size: 13px;
+        }
+
+        .search-result .address {
+            font-size: 13px;
+        }
+
+        .find button {
+            width: 30%;
+        }
+
+        .heading, .small-header {
+            font-size: 20px;
+        }
+
+        }
     
     
    
