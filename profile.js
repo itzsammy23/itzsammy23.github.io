@@ -1,4 +1,4 @@
-var ratedIndex = 1;
+var ratedIndex = -1;
 
 $(document).ready(function () {
 
