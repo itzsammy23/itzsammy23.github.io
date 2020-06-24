@@ -1,39 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>Laravel</title>
 
-    <title>Update iya yin</title>
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-    <!-- Scripts -->
-    <script src="app.js" defer></script>
-    <script src="signup.js'" defer></script>
-    <script src="https://kit.fontawesome.com/ee654fe705.js" crossorigin="anonymous"></script>
-    <script src="index.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="profile.js"></script>
+        <!-- Styles -->
+        <link href="app.css" rel="stylesheet">
+        <link href="landing.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/font-awesome.min.css">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="app.css" rel="stylesheet">
-    <link href="signupstyle.css" rel="stylesheet">
-    <link href="indexstyle.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/font-awesome.min.css">
-</head>
-<body style="background-color: #f2f2f2;">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <!-- Scripts -->
+        <script src="https://kit.fontawesome.com/ee654fe705.js" crossorigin="anonymous"></script>
+        <script src="app.js" defer></script>
+       
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Hussla
+                  Hussla
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" 
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -50,287 +41,232 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
-                            </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
-                                </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/customer/register">Register (Customer)</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/customer/login">Login (Customer)</a>
-                            </li>
+                      
+                 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" 
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    JOHN <span class="caret"></span>
+                                   John <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        Logout
                                     </a>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/customer/login">Sign In(Customer)</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/customer/register">Sign Up(Customer)</a>
+                                    </li>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
-                            
+                            </li>
+                     
                     </ul>
                 </div>
             </div>
         </nav>
-
-<!--<div class="container ">
-    <div class="row justify-content-center align-items-center">
-        <div class="form-file col-md-10" >
-                    <form method="GET" action="/search/result" onsubmit="return check();" name="select" id="select">
-            
-                        <div class="search-content">
-                        <div class="form-group row d-block offset-2 pr-5 pt-3" >
-                            <label for="service" class="heading col-md-12">What service might you be looking for today?</label>
-                            <div class="col-md-9">
-                                <input id="input-service" type="text" class="form-control @error('service')
-                                 is-invalid @enderror" name="service" 
-                                 required autocomplete="service" placeholder="Services..." autofocus>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group row d-block offset-2 pr-5 pt-3" >
-                            <label for="state" class="small-header col-md-4">State</label>
-                            <div class="col-md-9">
-                                <input id="input-state" type="text" class="form-control @error('state')
-                                 is-invalid @enderror" name="state" 
-                                 required autocomplete="state" placeholder="Your state of residence.." autofocus>
-                            </div>
-                        </div>
-                      
-
-                        <div class="form-group row d-block offset-2 pr-5 pt-3">
-                            <label for="area" class="small-header col-md-4 col-form-label">Area</label>
-            
-                            <div class="col-md-9">
-                                <input id="input-area" type="area" class="form-control @error('area') 
-                                is-invalid @enderror" name="area" 
-                                 required autocomplete="area" placeholder="Your area..">
-                                <span id="error-area" class="error"></span>
-                            </div>
-                        </div>
-
-                        <div class="row offset-2 pb-5">
-                            <div class="col-md-4">
-                                <button class="btn" type="submit">SEARCH</button>
-                            </div>
-                            </div>
-                    </div>
-                    </div>
+        <div class="starter">
+            <img src="tool-2820950_1920.jpg">
+            <div class="col-md-8 first-view pt-5 pl-5">
+                <div class="col-md-6 experts">In-demand Experts at your service</div>
+                <div class="col-md-6 connect pt-2 pb-3">Hussla.ng explicitly connects professionals and experts
+                to clients with just a few clicks.
                 </div>
-            </div>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10 mt-4">
-            <div class="form-group row d-flex offset-2 search-field">
-            <form method="GET" action="/find/user" style="width: 80%">
-            <div class="col-md-10 d-flex">
-            <input id="parameter" type="parameter" class="form-control col-md-8 @error('parameter') is-invalid @enderror"
-             name="parameter" value="" required autocomplete="parameter" placeholder="Search for a business or service provider" autofocus>
-             <button type="submit" name="search" class="search-btn ml-2"><i class="fas fa-search icon"></i></button>
-</div>
+                <div class="links d-inline">
+                    <a href="/servicefinder" class="btn mr-3 ml-3">Get Started</a>
+                    <a href="/register" class="btn-alternate mt-5">Sign Up</a>
+                </div>
+                <div class="know-more pt-4 pl-3">Want to know more ? <b>Scroll down</b></div>
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
-                    <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
 
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+
+        <div class="container service-container mt-4">
+            <h4>OUR SERVICES</h4>
+            <div class="row our-services pt-4">
+                        <div class="col-md-3 pb-4">
+                            <div align="center" class="first-column p-3"><i class="fas fa-faucet"></i></div>
+                            <div class="service-caption"><b>PLUMBING</b></div>
+                        </div>
+
+                        <div class="col-md-3 pb-4">
+                            <div align="center" class="first-column p-3"><i class="fas fa-hammer"></i></div>
+                            <div class="service-caption"><b>CARPENTRY</b></div>
+                        </div>
+                    
+                    
+                        <div class="col-md-3 pb-4">
+                            <div align="center" class="first-column p-3"><i class="fas fa-bolt"></i></div>
+                            <div class="service-caption"><b>ELECTRICAL REPAIR</b></div>
+                        </div>
+
+                        <div class="col-md-3 pb-4">
+                            <div align="center" class="first-column p-3"><i class="fas fa-cog"></i></div>
+                            <div class="service-caption"><b>AUTO MECHANIC</b></div>
+                        </div>
+
+    
+            </div>
+        </div>
+
+        <div align="center" class="search-category pt-3">Don't see what you're looking for ? 
+            <a href="/servicefinder">Search all categories</a></div>
+
+        
+                <div align="center" class="header pt-5">How It Works For Customers</div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="how-it-works col-md-12 d-flex mt-4">
+                        <i class="fas fa-search"></i>
+                        <div class="straight-line"></div>
+                        <i class="fas fa-id-card"></i>
+                        <div class="straight-line"></div>
+                        <i class="fas fa-handshake"></i>
+                        <div class="straight-line"></div>
+                        <i class="fas fa-check-circle"></i>
                         </div>
                     </div>
                 </div>
-            </div>       
-        </div>
 
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
+                <div class="container">
                     <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
-
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
+                        <div class="how-it-works-content col-md-12 d-flex mt-4">
+                        <div class="search col-md-3 d-block">
+                            <h4>SEARCH</h4>
+                            <p>Search for a service provider near you</p>
                         </div>
+
+                        <div class="contact col-md-3">
+                        <h4>CONTACT</h4>
+                            <p>Contact your preferred service provider through a call or text</p>
+                        </div>
+
+                        <div class="contact col-md-3 ml-4">
+                        <h4>CONNECT</h4>
+                            <p>Connect with the service provider for assistance with your current need</p>
+                        </div>
+
+                        <div class="contact col-md-3 ml-2">
+                        <h4>FEEDBACK</h4>
+                            <p>Rate and review the service provider to help others make decent choices</p>
+                        </div>
+                        </div>
+
+                       
                     </div>
                 </div>
-            </div>       
-        </div>
 
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
-                    <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
-
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div>
-
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
-                    <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
-
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div>
-
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
-                    <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
-
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div>
-
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
-                    <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
-
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div>
-
-        <div class="col-md-8">
-            <div class="card mb-4" style="border-radius: 20px;">
-                <div class="card-body">
-                    <div class="row">
-                        <img src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg" class="col-md-4 rounded-circle float-md-left">
-                        <div class="search-result col-md-6">
-                            <div class="name pt-2">Gbolahan Ajirebi</div>
-                            <div class="info pt-2">Haircuts, styling, dying and trims</div>
-                            <div class="address pt-2"><i class="fas fa-map-marker-alt"></i> : 30, Johnson Street, Magodo, Lagos</div>
-                            <div class="rating-star pt-2"><i class="fas fa-star"></i> : 4.5 / 5
-                            </div>
-
-                            <div class="pt-3"><a href="/view/profile/{{$user->id}}" class="btn">Contact</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>       
-        </div>
-    </div>
-</div> -->
+                <div align="center" class="header pt-5">How It Works For Service Providers</div>
 
 <div class="container">
-    <div class="row justify-content-center align-items-center">
-        <div class="content col-md-12">
-                <div class="profile-image col-md-12 pt-4">
-                    <img class="d-block mx-auto rounded-circle" src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg">
-            </div>
-            <div class="content-text">
-            <div class="pt-5"><h2>Adewale Folarin</h2></div>
-                <div class="name pt-3"><h3><i class="fas fa-building"></i> : Folarin's haircut palace</h3></div>
-                <div class="motto pt-2"><p><i class="fab fa-pied-piper"></i> <em>Best haircuts on the block</em></p></div>
-                <div class="address pt-1"><i class="fas fa-map-marker-alt"></i> : <span id="address">12, Hamin Street, Magodo, Lagos</span></div>
-                <div class="phone pt-3"><p><i class="fas fa-phone-alt"></i> : <span>+2349034941086</span></p></div>
-                <div class="location pt-2"></div>
-    </div>
-    <div class="contact pt-3" align="center">
-    <h2 align="center" style="font-weight: bold;">Contact:</h2>
-                    <a href="sms:+2349034941086" class="ml-4"><i class="fas fa-sms" aria-hidden="true"></i></a> &nbsp;
-                    <a href="tel:+2349034941086"><i class="fas fa-phone-alt" aria-hidden="true" ></i></a>
-                </div>
-    
-    <div class="rate pt-5 pb-3" align="center">
-                    <p style="color: #000d1a; font-size: 23px; font-weight: bold;">Rate Hussla:</p><br>
-                <i class="fas fa-star fa-8x" data-index = "0" id="starOne"></i>
-                <i class="fas fa-star fa-8x" data-index = "1" id="starTwo"></i>
-                <i class="fas fa-star fa-8x" data-index = "2" id="starThree"></i>
-                <i class="fas fa-star fa-8x" data-index = "3" id="starFour"></i> 
-                <i class="fas fa-star fa-8x" data-index = "4" id="starFive"></i><br>
-                <span id="message"></span>
-                </div>
-                
-                <div align="center" style="font-size: 18px"><a href="/view/comments/{{ $user->id }}"
-                 class="font-weight-bold">See reviews for this service provider</a></div>
-    
-                 <div class="row justify-content-center align-items-center">
-                     <div class="comment col-md-8 pt-5">
-                         <form method="POST" action="/view/profile/{{$user->id}}">
-
-                         <label for="review" class="col-md-4 col-form-label">Post a review</label>
-                         <input type="hidden" name="customerdetails" value="{{ session('user_agent') }}">
-                         <textarea name="comment" placeholder="Write a review for this service provider.."></textarea>
-                        
-                         <button type="submit" class="btn mt-2 mb-4">Post</button>
-    
-                         
-                        </form>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="how-it-works col-md-12 d-flex mt-4">
+        <i class="fas fa-user-plus"></i>
+        <div class="straight-line"></div>
+        <i class="fas fa-handshake"></i>
+        <div class="straight-line"></div>
+        <i class="fas fa-eye"></i>
+        <div class="straight-line"></div>
+        <i class="fas fa-sync-alt"></i>
         </div>
     </div>
-    </div>
-</body>
+</div>
 
-</body>
+<div class="container">
+    <div class="row">
+        <div class="how-it-works-content col-md-12 d-flex mt-4">
+        <div class="search col-md-3 d-block">
+            <h4>SIGN UP</h4>
+            <p>Create a free 90-day account on Hussla and make your services available to customers</p>
+        </div>
+
+        <div class="contact col-md-3">
+        <h4>CONNECT</h4>
+            <p>Connect with customers and provide your services</p>
+        </div>
+
+        <div class="contact col-md-3 ml-4">
+        <h4>MONITOR</h4>
+            <p>Keep track of your profile views and ratings and edit your profile anytime you want to
+                make it more attractive to customers
+            </p>
+        </div>
+
+        <div class="contact col-md-3 ml-2">
+        <h4>RENEW</h4>
+            <p>Renew your subscription yearly to ensure your services remain available to customers</p>
+        </div>
+        </div>
+
+       
+    </div>
+</div>
+
+<div align="center" class="pt-5 pb-5"><a href="/register" class="button">Sign Up As A Service Provider</a></div>
+
+                <div class="container why-hussla mt-5">
+                    <h4>Why Hussla.ng?</h4>
+                    <div class="row">
+                        <div class="d-flex">
+                            <div class="col-md-2 d-block ml-5 pb-5 pt-5">
+                                <div class="circle"></div>
+                                <div class="connector-line"></div>
+                                <div class="circle"></div>
+                                <div class="connector-line"></div>
+                                <div class="circle"></div>
+                                <div class="connector-line"></div>
+                                <div class="circle"></div>
+                            </div>
+
+                            <div class="why-hussla-content col-md-10 pt-5">
+                            <div class="points col-md-12 pb-4">Hussla.ng is user-friendly and easy to use.</div>
+                            <div class="points col-md-12 pb-2">Hussla.ng provides an easy platform for connecting
+                                clients with service providers.
+                            </div>
+                            <div class="points col-md-12 pb-4">Hussla members are seasoned individuals with 
+                                wealth of experience.</div>
+                                <div class="points col-md-12 pb-4">Hussla service providers are trust-worthy and
+                                 reliable.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+        
+                <div align="center" class="testimonials pt-5 pb-5">Testimonials</div>
+
+                <div class="container pb-5">
+                    <div class="row">
+                        <div class="col-md-6 validator d-flex pt-3 mb-4">
+                                <img src="IMG_9848-copy.jpg">
+
+                            <div class="recommendation col-md-8 pt-5"><em>"Hussla.ng is a great open platform that connects people
+                             with professional and reliable experts that can solve your most immediate problems."</em>
+                            <div class="col-md-6 pt-4 font-weight-bold">Femi Adebayo CEO Artisanget</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 validator d-flex pt-3 mb-4">
+                                <img src="IMG-20200621-WA0019.jpg">
+
+                            <div class="recommendation col-md-8 pt-5 "><em>"Hussla.ng is an innovative idea which benefits both service
+                                providers and customers alike.I'm proud to be a part of this project even though most of the work was done
+                                by the web developer wonderkid."</em>
+                            <div class="col-md-8 pt-4 font-weight-bold">Okurounmu Peter Founder Internnect</div>
+                        </div>
+                    </div>
+
+                        
+                    </div>
+                </div>
+    </body>
 </html>

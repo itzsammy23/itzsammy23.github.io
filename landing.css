@@ -1,0 +1,331 @@
+.starter {
+    position: relative;
+    width: 100%;
+  }
+
+.starter img {
+    width: 100%;
+    height: 350px;
+    filter: brightness(50%);
+}
+
+.first-view {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
+.first-view .experts {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+
+.connect {
+    font-size: 18px;
+    color: #f2f2f2;
+}
+
+.links .btn {
+        background-color: #000d1a;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #000d1a;
+}
+
+.links .btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.links .btn-alternate {
+    border: 2px solid #ffffff;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.50rem 2rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.links .btn-alternate:hover {
+    background-color: #000d1a;
+    color: #ffffff;
+    border: 2px solid #000d1a;
+    transition: 0.5s ease-in-out;
+
+}
+
+.know-more {
+    font-size: 17px;
+    color: #fff;
+}
+
+.service-container {
+    background-color: #000d1a;
+    border-radius: 25px 0px 25px 0px;
+}
+
+.service-container h4 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.first-column {
+    background-color: #8c8c8c;
+}
+
+.first-column .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
+    font-size: 150px;
+    padding: 20px;
+}
+
+.first-column .fa-faucet {
+    color: #3366cc;
+}
+
+.fa-hammer {
+    color: #990000;
+}
+
+.fa-bolt {
+    color: #ffcc00;
+}
+
+.fa-cog {
+    color: #000000;
+}
+
+
+
+
+.our-services .service-caption {
+    background-color: #fff;
+    color: #000d1a;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.search-category {
+    font-size: 18px;
+}
+
+.search-category a{
+    font-weight: bold;
+    color: #0059b3;
+    font-size: 18px;
+}
+
+.header {
+    color: #0059b3;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.how-it-works {
+    margin-left: 80px;
+}
+
+.how-it-works .fa-search, .fa-id-card, .fa-handshake, .fa-check-circle, .fa-user-plus, .fa-eye, .fa-sync-alt {
+    font-size: 50px;
+    padding: 35px;
+    border-radius : 50%;
+}
+
+.fa-check-circle {
+    color: #fff;
+    background-color: green;
+}
+
+.fa-id-card {
+    color:#fff;
+    background-color: #66ccff;
+}
+
+.fa-handshake {
+    color:#fff;
+    background-color: #ff9900;
+}
+
+.fa-eye {
+    color:#fff;
+    background-color: #000;
+}
+
+.how-it-works .fa-search{
+    color:#fff;
+    background-color: #0059b3;
+}
+
+.fa-user-plus {
+    color: #fff;
+    background-color: green;
+}
+
+.fa-sync-alt {
+    color:#fff;
+    background-color: #0059b3;
+}
+
+
+
+.straight-line {
+    width:15%;
+    border : 1px solid #8c8c8c;
+    height:0px;
+    margin-top: 50px;
+}
+
+.how-it-works-content {
+    margin-left: 0px;
+    text-align:center;
+}
+
+.how-it-works-content h4 {
+    font-weight: bold;
+}
+
+.how-it-works-content p {
+    font-size: 15px;
+}
+
+.how-it-works-content .contact {
+    margin-left: 20px;
+}
+
+.why-hussla {
+    background-color: #000d1a;
+    border-radius: 25px;
+}
+
+.why-hussla h4 {
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding-top: 25px;
+}
+
+
+.circle {
+    width: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.connector-line {
+    height: 40px;
+    width: 0px;
+    border: 1px solid #fff;
+    margin-left: 8px;
+}
+
+.why-hussla-content {
+    color: #fff;
+}
+
+.why-hussla-content .points {
+    font-size: 18px;
+}
+
+.button {
+    background-color: #0059b3;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #0059b3;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #227dc7;
+    border-color: #2176bd;
+}
+
+.testimonials {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000d1a;
+}
+
+.validator {
+    border-left: 4px solid #0059b3;
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.validator img {
+    width: 40%;
+    height: 98%;
+}
+
+.recommendation {
+    font-size: 17px;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    .first-column .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
+        font-size: 80px;
+        padding: 20px;
+    }
+
+    
+.how-it-works {
+    margin-left: 2px;
+}
+
+.how-it-works-content .search  {
+    margin-left: -11px;
+}
+
+.how-it-works-content .contact  {
+    margin-left: 18px;
+}
+
+.how-it-works-content h4{
+    font-size: 14px;
+}
+
+.how-it-works-content p {
+    font-size: 12px;
+}
+
+
+    .how-it-works .fa-search, .fa-id-card, .fa-handshake, .fa-check-circle, .fa-user-plus,
+     .fa-sync-alt, .fa-eye {
+        font-size: 40px;
+        padding: 15px;
+        border-radius : 50%;
+    }
+
+    .straight-line {
+        margin-top: 30px;
+    }
+
+    .connector-line {
+        height: 60px;
+    }
+
+    .why-hussla-content {
+        margin-right: 45%;
+
+    }
+
+    .why-hussla-content .points {
+        width: 300px;
+        font-size: 15px;
+    }
+    
+}
+
+
+
