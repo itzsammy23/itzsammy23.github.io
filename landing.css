@@ -280,7 +280,6 @@
 
     .first-view .experts {
         font-size: 18px;
-        color: blue;
     }
 
     .first-view .connect {
@@ -296,7 +295,7 @@
 }
 
 .how-it-works-content .contact  {
-    margin-left: 18px;
+    margin-left: 2%;
 }
 
 .how-it-works-content h4{
