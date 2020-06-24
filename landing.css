@@ -278,6 +278,10 @@
         padding: 20px;
     }
 
+    .starter img {
+        filter: brightness(50%);
+    }
+
     .first-view .experts {
         font-size: 18px;
     }
