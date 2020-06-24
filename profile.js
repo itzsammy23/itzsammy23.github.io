@@ -94,7 +94,7 @@ $('#starFour').mouseleave(function() {
     $('#message').text("");
 })
 
-$('#starFive').mouseover(function() {
+$('#starFive').click(function() {
     $('#message').text("Excellent!");
     $('#message').css("color", "#006600");
 })
