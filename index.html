@@ -283,8 +283,7 @@
     <div class="row justify-content-center align-items-center">
         <div class="content col-md-12">
                 <div class="profile-image col-md-12 pt-4">
-                    <img class="d-block mx-auto rounded-circle" src="/storage/{{ $user->profile->image }}">
-                    <span class='userId'>{{ $user->id }}</span>
+                    <img class="d-block mx-auto rounded-circle" src="dQOWKAaiwkbO8TJHR028GU4ydLR2plNkLqhTOnQE.jpeg">
             </div>
             <div class="content-text">
             <div class="pt-5"><h2>{{ $user->firstname }} Adewale Folarin</h2></div>
@@ -317,7 +316,7 @@
                      <div class="comment col-md-8 pt-5">
                          <form method="POST" action="/view/profile/{{$user->id}}">
 
-                         <label for="review" class="col-md-4 col-form-label">{{ __('Post a review') }}</label>
+                         <label for="review" class="col-md-4 col-form-label">Post a review</label>
                          <input type="hidden" name="customerdetails" value="{{ session('user_agent') }}">
                          <textarea name="comment" placeholder="Write a review for this service provider.."></textarea>
                         
