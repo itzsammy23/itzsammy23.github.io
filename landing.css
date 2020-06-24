@@ -272,18 +272,18 @@
 }
 
 
-@media screen and (min-width: 200px) and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
     .first-column .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
         font-size: 80px;
         padding: 20px;
     }
 
     .first-view .experts {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     .first-view .connect {
-        font-size: 13px;
+        font-size: 12px;
     }
     
 .how-it-works {
