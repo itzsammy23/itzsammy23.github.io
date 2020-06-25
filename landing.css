@@ -316,7 +316,7 @@
 }
 
 .scrollable{
-    width: 90%;
+    width: 100%;
     overflow: auto;
     white-space: nowrap;
 }
@@ -353,7 +353,7 @@
 
 
     .connector-line {
-        height: 20%;
+        height: 60%;
     }
 
     .why-hussla-content {
