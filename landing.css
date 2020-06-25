@@ -331,8 +331,12 @@
 
     }
 
+    .connector {
+        margin-left: 15px;
+    }
+
     .why-hussla-content .points {
-        width: 150px;
+        width: 100%;
         font-size: 15px;
     }
     
