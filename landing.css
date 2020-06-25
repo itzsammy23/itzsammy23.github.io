@@ -322,34 +322,44 @@
 }
 
 
-    .how-it-works .fa-search, .fa-id-card, .fa-handshake, .fa-check-circle, .fa-user-plus,
-     .fa-sync-alt, .fa-eye {
-        border-radius : 50%;
-    }
+   
+.how-it-works .fa-search, .fa-id-card, .fa-handshake, .fa-check-circle, .fa-user-plus,
+.fa-sync-alt, .fa-eye {
+   border-radius : 50%;
+}
 
-    .how-it-works .straight-line {
-        margin-top: 60px;
-    }
+.how-it-works .straight-line {
+   margin-top: 60px;
+}
 
-    .fa-id-card {
-        margin-left:23%;
-    }
+.fa-id-card {
+   margin-left:13%;
+}
 
-    .fa-handshake {
-        margin-left: 30%;
-    }
+.fa-handshake {
+   margin-left: 5%;
+}
 
-    .fa-check-circle {
-        margin-left: 32%;
-    }
+.second-view .fa-handshake {
+   margin-left: 18%;
+}
 
-    .fa-user-plus {
-        margin-left: 10%;
-    }
+.fa-check-circle {
+   margin-left: 2%;
+}
 
-    .fa-eye, .fa-sync-alt {
-        margin-left: 32%;
-    }
+.fa-user-plus {
+   margin-left: 0%;
+}
+
+.fa-eye {
+   margin-left: 20%;
+}
+
+.fa-sync-alt {
+   margin-left: 12%;
+}
+
 
 
     .connector-line {
