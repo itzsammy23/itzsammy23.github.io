@@ -272,7 +272,7 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
     .first-column .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
         font-size: 80px;
         padding: 20px;
@@ -316,7 +316,7 @@
 }
 
 .scrollable{
-    width: 100%;
+    width: 90%;
     overflow: auto;
     white-space: nowrap;
 }
