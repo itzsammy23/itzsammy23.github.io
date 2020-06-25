@@ -278,12 +278,8 @@
         padding: 20px;
     }
 
-    .starter img {
-        filter: brightness(50%);
-    }
-
     .first-view .experts {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .first-view .connect {
@@ -291,15 +287,24 @@
     }
     
 .how-it-works {
-    margin-left: -7px;
+    margin-left: 15%;
+    width: 200%;
+}
+
+.how-it-works .straight-line {
+    width: 200px;
 }
 
 .how-it-works-content .search  {
-    margin-left: -11px;
+    margin-left: 1%;
 }
 
-.how-it-works-content .contact  {
-    margin-left: -8%;
+.how-it-works-content .contact {
+    margin-left: 12%;
+}
+
+.how-it-works-content .feedback {
+    margin-left: 27%;
 }
 
 .how-it-works-content h4{
@@ -310,39 +315,59 @@
     font-size: 12px;
 }
 
+.scrollable{
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+}
+
 
     .how-it-works .fa-search, .fa-id-card, .fa-handshake, .fa-check-circle, .fa-user-plus,
      .fa-sync-alt, .fa-eye {
-        font-size: 40px;
-        padding: 15px;
         border-radius : 50%;
     }
 
-    .straight-line {
-        margin-top: 30px;
+    .how-it-works .straight-line {
+        margin-top: 60px;
     }
+
+    .fa-id-card {
+        margin-left:23%;
+    }
+
+    .fa-handshake {
+        margin-left: 30%;
+    }
+
+    .fa-check-circle {
+        margin-left: 32%;
+    }
+
+    .fa-user-plus {
+        margin-left: 10%;
+    }
+
+    .fa-eye, .fa-sync-alt {
+        margin-left: 32%;
+    }
+
 
     .connector-line {
         height: 60px;
     }
-    
-
-    .why-hussla {
-        padding-left: 20px;
-    }
 
     .why-hussla-content {
-        margin-right: 25%;
+        margin-right: 45%;
 
-    }
-
-    .connector {
-        margin-left: 15px;
     }
 
     .why-hussla-content .points {
-        width: 100%;
+        width: 300px;
         font-size: 15px;
+    }
+
+    .validator img {
+        height: 50%;
     }
     
 }
