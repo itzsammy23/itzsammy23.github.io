@@ -325,9 +325,14 @@
     .connector-line {
         height: 60px;
     }
+    
+
+    .why-hussla {
+        padding-left: 20px;
+    }
 
     .why-hussla-content {
-        margin-right: 45%;
+        margin-right: 25%;
 
     }
 
