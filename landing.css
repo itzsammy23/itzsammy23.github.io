@@ -71,7 +71,7 @@ h4 {
     transition: 0.5s;
   }
   
-  .btn span:after, .button span:after {
+   .button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -80,11 +80,11 @@ h4 {
     transition: 0.5s;
   }
   
-  .btn:hover span, .button:hover span {
+  .button:hover span {
     padding-right: 25px;
   }
   
-  .btn:hover span:after, .button:hover span:after {
+   .button:hover span:after {
     opacity: 1;
     right: 0;
   }
