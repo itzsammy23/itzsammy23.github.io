@@ -23,8 +23,8 @@
     <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="">
-                  Hussla
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    Hussla
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" 
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -42,11 +42,21 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                       
-                 
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+
+                        @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" 
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                   John <span class="caret"></span>
+                                    Peter <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -69,7 +79,7 @@
                                     </form>
                                 </div>
                             </li>
-                     
+                        @endguest
                     </ul>
                 </div>
             </div>
@@ -77,151 +87,116 @@
         <div class="starter">
             <img src="tool-2820950_1920.jpg">
             <div class="col-md-8 first-view pt-5 pl-5">
-                <div class="col-md-6 experts">In-demand Experts at your service</div>
-                <div class="col-md-6 connect pt-2 pb-3">Hussla.ng explicitly connects professionals and experts
-                to clients with just a few clicks.
-                </div>
+                <h2>In-demand Experts at your service</h2>
+                <h4>Hussla.ng explicitly connects professionals and experts
+                to clients with just a few clicks.<h4>
                 <div class="links d-inline">
-                    <a href="/servicefinder" class="btn mr-3 ml-3">Get Started</a>
+                    <a href="/servicefinder" class="btn mr-3 ml-3"><span>Get Started </span></a>
                     <a href="/register" class="btn-alternate mt-5">Sign Up</a>
                 </div>
                 <div class="know-more pt-4 pl-3">Want to know more ? <b>Scroll down</b></div>
             </div>
         </div>
 
-
-        <div class="container service-container mt-4">
-            <h4>OUR SERVICES</h4>
-            <div class="row our-services pt-4">
-                        <div class="col-md-3 pb-4">
-                            <div align="center" class="first-column p-3"><i class="fas fa-faucet"></i></div>
-                            <div class="service-caption"><b>PLUMBING</b></div>
-                        </div>
-
-                        <div class="col-md-3 pb-4">
-                            <div align="center" class="first-column p-3"><i class="fas fa-hammer"></i></div>
-                            <div class="service-caption"><b>CARPENTRY</b></div>
-                        </div>
-                    
-                    
-                        <div class="col-md-3 pb-4">
-                            <div align="center" class="first-column p-3"><i class="fas fa-bolt"></i></div>
-                            <div class="service-caption"><b>ELECTRICAL REPAIR</b></div>
-                        </div>
-
-                        <div class="col-md-3 pb-4">
-                            <div align="center" class="first-column p-3"><i class="fas fa-cog"></i></div>
-                            <div class="service-caption"><b>AUTO MECHANIC</b></div>
-                        </div>
-
-    
+     <div class="container service-lister">
+        <div class="row">
+            <div class="find-service">Find the best</div>
+            <div class="col-md-12 d-flex item-list">
+            <div class="col-md-2 item d-block">
+            <i class="fas fa-faucet"></i>
+            <h5> Plumbers</h5>
             </div>
+
+            <div class="col-md-2 item d-block">
+            <i class="fas fa-hammer"></i>
+            <h5>Carpenters</h5>
+            </div>
+
+            <div class="col-md-2 item d-block ">
+            <i class="fas fa-bolt"></i>
+            <h5>Electricians</h5>
+            </div>
+
+            <div class="col-md-2 item d-block">
+            <i class="fas fa-cog"></i>
+            <h5>Auto mechanics</h5>
+            </div>
+
+            </div>
+
+           
+           
+
+        </div>
+            </div>
+
         </div>
 
-        <div align="center" class="search-category pt-3">Don't see what you're looking for ? 
-            <a href="/servicefinder">Search all categories</a></div>
-
+        <div class="pt-3 and-more" align="center">And more...<a href="/servicefinder">Explore all categories</a></div>
+        <div class="how-it-works" align="center">How It Works</div>
         
-                <div align="center" class="header pt-5">How It Works For Customers</div>
-
-                <div class="scrollable">
-                <div class="container">
-                    <div class="row">
-                        <div class="how-it-works col-md-12 d-flex mt-4">
-                        <i class="fas fa-search"></i>
-                        <div class="straight-line"></div>
-                        <i class="fas fa-id-card"></i>
-                        <div class="straight-line"></div>
-                        <i class="fas fa-handshake"></i>
-                        <div class="straight-line"></div>
-                        <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
+        <div class="container content-list">
+            <div class="row">
+                <div class="search col-md-3">
+                <i class="fas fa-search"></i>
+                <h3>SEARCH<h3>
+                <p>Search for a service provider around you.</p>
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="how-it-works-content col-md-12 d-flex mt-4">
-                            <div class="search col-md-3 d-block">
-                                <h4>SEARCH</h4>
-                                <p>Search for a service provider near you</p>
-                            </div>
-    
-                            <div class="contact col-md-3">
-                            <h4>CONTACT</h4>
-                                <p>Contact your preferred service provider through<br> a call or text</p>
-                            </div>
-    
-                            <div class="contact col-md-3 ml-4">
-                            <h4>CONNECT</h4>
-                                <p>Connect with the service provider</p>
-                            </div>
-    
-                            <div class="feedback col-md-3 ml-2">
-                            <h4>FEEDBACK</h4>
-                                <p>Rate and review the service provider </p>
-                            </div>
-                            </div>
+                <div class="search col-md-3">
+                <i class="fas fa-id-card"></i>
+                <h3>CONTACT<h3>
+                <p>Contact the service provider through a call or text.</p>
+                </div>
+                <div class="search col-md-3">
+                <i class="fas fa-handshake"></i>
+                <h3>CONNECT<h3>
+                <p>Connect with the service provider.</p>
+                </div>
 
-                       
-                    </div>
+                <div class="search-last col-md-3">
+                <i class="fas fa-check-circle"></i>
+                <h3>FEEDBACK<h3>
+                <p>Rate and review the service provider.</p>
                 </div>
             </div>
-
-                <div align="center" class="header pt-5">How It Works For Service Providers</div>
-
-<div class="scrollable">
-<div class="container">
-    <div class="row">
-        <div class="how-it-works second-view col-md-12 d-flex mt-4">
-        <i class="fas fa-user-plus"></i>
-        <div class="straight-line"></div>
-        <i class="fas fa-handshake"></i>
-        <div class="straight-line"></div>
-        <i class="fas fa-eye"></i>
-        <div class="straight-line"></div>
-        <i class="fas fa-sync-alt"></i>
         </div>
-    </div>
-</div>
+        <div align="center" class="pt-5 pb-5"><a href="/servicefinder" class="btn"><span>Get Started </span></a></div>
+        <div class="how-it-works-two" align="center" style="color: #000d1a;">Want to become a service provider ?</div>
+        <div class="container content-list">
+            <div class="row">
+                <div class="search col-md-3">
+                <i class="fas fa-user-plus"></i>
+                <h3>SIGN UP<h3>
+                <p>Sign up as a service provider and get a free 90 day account.</p>
+                </div>
 
-<div class="container">
-    <div class="row">
-        <div class="how-it-works-content col-md-12 d-flex mt-4">
-            <div class="search col-md-3 d-block">
-                <h4>SIGN UP</h4>
-                <p>Create a free 90-day account on Hussla </p>
-            </div>
-    
-            <div class="contact col-md-3">
-            <h4>CONNECT</h4>
-                <p>Connect with customers and provide your services</p>
-            </div>
-    
-            <div class="contact col-md-3 ml-4">
-            <h4>MONITOR</h4>
-                <p>Keep track of your profile views and ratings and<br> edit your profile anytime you want.
-                </p>
-            </div>
-    
-            <div class="contact col-md-3 ml-2">
-            <h4>RENEW</h4>
-                <p>Renew your subscription yearly</p>
-            </div>
-            </div>
+                <div class="search col-md-3">
+                <i class="fas fa-handshake"></i>
+                <h3>CONNECT<h3>
+                <p>Connect with customers and provide your services.</p>
+                </div>
+                <div class="search col-md-3">
+                <i class="fas fa-eye"></i>
+                <h3>MONITOR<h3>
+                <p>Keep track of your profile views and ratings and edit your profile anytime.</p>
+                </div>
 
-       
-    </div>
-</div>
-</div>
+                <div class="search-last col-md-3">
+                <i class="fas fa-sync-alt"></i>
+                <h3>RENEW<h3>
+                <p>Renew your subscription annually.</p>
+                </div>
+            </div>
+        </div>
 
-<div align="center" class="pt-5 pb-5"><a href="/register" class="button">Sign Up As A Service Provider</a></div>
+        <div align="center" class="pt-5 pb-5"><a href="/register" class="button"><span>Sign Up </span></a></div>
 
-                <div class="container why-hussla mt-5">
+        <div class="container why-hussla mt-5">
                     <h4>Why Hussla.ng?</h4>
                     <div class="row">
                         <div class="connector d-flex">
-                            <div class="col-md-2 d-block pb-5 pt-5">
+                            <div class="col-md-2 d-block pb-5 pt-5 ml-2">
                                 <div class="circle"></div>
                                 <div class="connector-line"></div>
                                 <div class="circle"></div>
@@ -243,33 +218,126 @@
                             </div>
                         </div>
                     </div>
-                </div>     
-        
-                <div align="center" class="testimonials pt-5 pb-5">Testimonials</div>
+                </div> 
 
-                <div class="container pb-5">
-                    <div class="row">
-                        <div class="col-md-6 validator d-flex pt-3 mb-4">
-                                <img src="IMG_9848-copy.jpg">
 
-                            <div class="recommendation col-md-8 pt-5"><em>"Hussla.ng is a great open platform that connects people
-                             with professional and reliable experts that can solve your most immediate problems."</em>
-                            <div class="col-md-6 pt-4 font-weight-bold">Femi Adebayo CEO Artisanget</div>
+                    <div id="loaded-content">
+                        <div id="loader"></div>
+
+                        <div class="further-content" id="further-views">
+                            <div class="container questions">
+                                <div class="row">
+                            <button type="button" class="collapsible">Are Hussla.ng services free ? <span class="caret float-md-right">
+                            <i class="fas fa-caret-down" id="toggleArrow"></i>
+                            </span></button>
+                            <div class="content">
+                                <p>Using Hussla.ng to find and connect with service providers is free. However the services of the 
+                                    professionals are not for free.
+                                </p>
+                            </div>
+                            <button type="button" class="collapsible">Are Hussla.ng service providers reliable ? <span class="caret float-md-right">
+                            <i class="fas fa-caret-down" id="toggleArrow"></i>
+                            </span></button>
+                            <div class="content">
+                                <p>All service providers are seasoned and competent professionals who you can rely on to give you the best 
+                                    possible service.
+                                </p>
+                            </div>
+                            <button type="button" class="collapsible">How long does it take to find a service provider ? <span class="caret float-md-right">
+                            <i class="fas fa-caret-down" id="toggleArrow"></i>
+                            </span></button>
+                            <div class="content">
+                                <p>We connect you with the service providers closest to your location so having a service provider meet up to assist with your need 
+                                    should only take a couple of minutes.
+                                </p>
+                            </div>
+                                </div>
+                            </div>
+
+                            <div class="how-it-works" align="center">Testimonials</div>
+
+                            <div class="container pb-5 pt-5">
+                                <div class="row">
+                                    <div class="col-md-10 testimonial">
+                                    <em>"Hussla.ng is a great open platform that connects people
+                                        with professional and reliable experts that can solve your most immediate problems."</em>
+                                        <div class="anchor pt-3">Jethro Osifuwa, CEO Innovate</div>
+                                        </div>
+                                    <div class="picture col-md-2">
+                                        <img src="/storage/landing/african-american-3279360_640.jpg">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            
+                            <div class="container pb-5 pt-5">
+                                <div class="row">
+                                <div class="second-picture col-md-2">
+                                        <img src="/storage/landing/IMG-20200621-WA0019.jpg">
+                                    </div>
+
+                                    <div class="col-md-10 second-testimonial">
+                                    <em>"Hussla.ng is an innovative idea which benefits both service
+                                            providers and customers alike.I'm proud to be a part of this project."</em>
+                                        <div class="anchor pt-3">Okurounmu Peter, Co-Founder Internnect</div>
+                                        </div>  
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 validator d-flex pt-3 mb-4">
-                                <img src="IMG-20200621-WA0019.jpg">
-
-                            <div class="recommendation col-md-8 pt-5 "><em>"Hussla.ng is an innovative idea which benefits both service
-                                providers and customers alike.I'm proud to be a part of this project even though most of the work was done
-                                by the web developer wonderkid."</em>
-                            <div class="col-md-8 pt-4 font-weight-bold">Okurounmu Peter Founder Internnect</div>
-                        </div>
-                    </div>
-
-                        
-                    </div>
-                </div>
     </body>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var caret = document.getElementById("toggleArrow");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+    
+    caret.classList.toggle("fa-caret-up");
+  });
+}
+
+function getDocHeight() {
+    return Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    )
+}
+
+function amountscrolled(){
+    var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
+    var docheight = getDocHeight()
+    var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+    var trackLength = docheight - winheight
+    var pctScrolled = Math.floor(scrollTop/trackLength * 100) 
+    var loadedContent = document.getElementById("loaded-content");
+    console.log(pctScrolled + '% scrolled')
+
+    function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("further-views").style.display = "block";
+}
+
+    if(pctScrolled >= 96) {
+        loadedContent.style.display = "block";
+        var time;
+        time = setTimeout(showPage, 2000);
+    }
+}
+ 
+window.addEventListener("scroll", function(){
+    amountscrolled()
+}, false)
+</script>
 </html>
