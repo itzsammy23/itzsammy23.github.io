@@ -85,39 +85,29 @@
             </div>
         </div>
 
-     <div class="container service-lister">
-        <div class="row">
-            <div class="find-service">Find the best</div>
-            <div class="col-md-12 d-flex item-list">
-            <div class="col-md-2 item">
-            <i class="fas fa-faucet"></i>
-            <h5> Plumbers</h5>
+        <div align="center" class="slide-show container">
+
+
+            <div class="col-md-3 item">
+                <i class="fas fa-faucet"></i>
+                <h5> Plumbers</h5>
+                </div>
+    
+                <div class="col-md-3 item">
+                <i class="fas fa-hammer"></i>
+                <h5>Carpenters</h5>
+                </div>
+    
+                <div class="col-md-3 item">
+                <i class="fas fa-lightbulb"></i>
+                <h5>Electricians</h5>
+                </div>
+    
+                <div class="col-md-3 item">
+                <i class="fas fa-wrench"></i>
+                <h5>Auto mechanics</h5>
+                </div>
             </div>
-
-            <div class="col-md-2 item ">
-            <i class="fas fa-hammer"></i>
-            <h5>Carpenters</h5>
-            </div>
-
-            <div class="col-md-2 item">
-            <i class="fas fa-bolt"></i>
-            <h5>Electricians</h5>
-            </div>
-
-            <div class="col-md-2 last-item">
-            <i class="fas fa-cog"></i>
-            <h5>Auto mechanics</h5>
-            </div>
-
-            </div>
-
-           
-           
-
-        </div>
-            </div>
-
-        </div>
 
         <div class="pt-3 and-more" align="center">And more...<a href="/servicefinder">Explore all categories</a></div>
         <div class="how-it-works" align="center">How It Works</div>
@@ -276,6 +266,23 @@
 
     </body>
     <script>
+         	var slideIndex = 0;
+	showSlides();
+
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("item");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); 
+}
+
+
     var coll = document.getElementsByClassName("collapsible");
     var caret = document.getElementById("toggleArrow");
     var i;
