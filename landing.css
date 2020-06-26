@@ -395,15 +395,19 @@ h4 {
 }
 
 h5 {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .how-it-works, .how-it-works-two {
     font-size: 18px;
 }
 
+.last-item {
+    display : none;
+}
+
 .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
-    font-size: 22px;
+    font-size: 40px;
     text-align: center;
 }
 
