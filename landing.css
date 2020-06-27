@@ -400,7 +400,7 @@ h5 {
 }
 
 .content-list {
-    width: 60%;
+    width: 65%;
     background-color: #fff;
     border: none;
     border-radius: none;
@@ -429,7 +429,7 @@ h5 {
 }
 
 .fa-search, .fa-handshake, .fa-sync-alt, .fa-id-card, .fa-star, .fa-user-plus, .fa-eye {
-    width: 35%;
+    width: 40%;
     font-size: 40px;
     color: #fff;
     background-color: #0059b3;
