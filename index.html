@@ -41,6 +41,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                      
+                       
+                            <li class="nav-item">
+                                        <a class="nav-link" href="/customer/login">Sign In(Customer)</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/customer/register">Sign Up(Customer)</a>
+                                    </li>
+
+    
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" 
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -67,6 +78,7 @@
                                     </form>
                                 </div>
                             </li>
+
                     </ul>
                 </div>
             </div>
@@ -85,31 +97,32 @@
             </div>
         </div>
 
-        <div align="center" class="find-service mt-5">Find the best : </div>
 
+        <div align="center" class="find-service mt-5">Find the best : </div>
+        
         <div align="center" class="slide-show container">
 
 
-            <div class="col-md-3 item">
-                <i class="fas fa-faucet"></i>
-                <h5> Plumbers</h5>
-                </div>
-    
-                <div class="col-md-3 item">
-                <i class="fas fa-hammer"></i>
-                <h5>Carpenters</h5>
-                </div>
-    
-                <div class="col-md-3 item">
-                <i class="fas fa-lightbulb"></i>
-                <h5>Electricians</h5>
-                </div>
-    
-                <div class="col-md-3 item">
-                <i class="fas fa-wrench"></i>
-                <h5>Auto mechanics</h5>
-                </div>
+        <div class="col-md-3 item">
+            <i class="fas fa-faucet"></i>
+            <h5> Plumbers</h5>
             </div>
+
+            <div class="col-md-3 item">
+            <i class="fas fa-hammer"></i>
+            <h5>Carpenters</h5>
+            </div>
+
+            <div class="col-md-3 item">
+            <i class="fas fa-lightbulb"></i>
+            <h5>Electricians</h5>
+            </div>
+
+            <div class="col-md-3 item">
+            <i class="fas fa-tools"></i>
+            <h5>Auto mechanics</h5>
+            </div>
+        </div>
 
         <div class="pt-3 and-more" align="center">And more...<a href="/servicefinder">Explore all categories</a></div>
         <div class="how-it-works" align="center">How It Works</div>
@@ -134,7 +147,7 @@
                 </div>
 
                 <div class="search-last col-md-3">
-                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-star"></i>
                 <h3>FEEDBACK<h3>
                 <p>Rate and review the service provider.</p>
                 </div>
@@ -150,7 +163,7 @@
                 <p>Sign up as a service provider and get a free 90 day account.</p>
                 </div>
 
-                <div class="search col-md-3">
+                <div class="search handshake col-md-3">
                 <i class="fas fa-handshake"></i>
                 <h3>CONNECT<h3>
                 <p>Connect with customers and provide your services.</p>
@@ -268,7 +281,7 @@
 
     </body>
     <script>
-         	var slideIndex = 0;
+        	var slideIndex = 0;
 	showSlides();
 
 
@@ -328,7 +341,7 @@ function amountscrolled(){
     if(pctScrolled >= 96) {
         loadedContent.style.display = "block";
         var time;
-        time = setTimeout(showPage, 2000);
+        time = setTimeout(showPage, 1500);
     }
 }
  
