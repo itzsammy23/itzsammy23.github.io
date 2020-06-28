@@ -436,7 +436,7 @@ h5 {
     width: 40%;
     font-size: 40px;
     color: #fff;
-    animation: change 5s infinite ease-out;
+    background-color: #0059b3;
     border: 3px solid #cccccc;
     border-radius: 50%;
     padding: 15px;
@@ -446,29 +446,8 @@ h5 {
     transform: translate(-50%, -50%);
 }
 
-@keyframes change {
-    0% {background-color: #0059b3;}
-    100% {background-color: #000d1a};
-}
-
-@-webkit-keyframes change {
-    0% {background-color: #0059b3;}
-    100% {background-color: #000d1a};
-}
-
-
-.fa-user-plus, .fa-eye ,.handshake .fa-handshake, .fa-sync-alt {
-    animation: turn 5s infinite ease-out;
-}
-
-@keyframes turn {
-    0% {background-color: #000d1a;}
-    100% {background-color: #0059b3};
-}
-
-@-webkit-keyframes change {
-    0% {background-color: #000d1a;}
-    100% {background-color: #0059b3;};
+.fa-user-plus, .fa-phone-alt, .fa-star, .fa-eye  {
+    background-color: #000000;
 }
 
 
