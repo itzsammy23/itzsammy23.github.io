@@ -116,8 +116,16 @@ h4 {
     text-align: center;
 }
 
+.fa-faucet {
+    color: #336699;
+}
+
 .fa-lightbulb {
     color: #ff9933;
+}
+
+.fa-tools {
+    color: #132639;
 }
 
 h5 {
@@ -178,9 +186,31 @@ h5 {
     font-size: 70px;
     text-align: center;
     padding-top: 30px;
-    color: #000000;
+    color: #000d1a;
 }
 
+.advert {
+    margin-top: 18%;
+}
+
+.keypad img {
+    width: 140%;
+}
+
+.advert h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #0059b3;
+}
+
+.advert p {
+    text-align: center;
+    color: #000d1a;
+    font-size: 22px;
+    margin-left: 6%;
+    font-weight: bold;
+}
 h3{
     font-weight: bold;
     text-align: center;
@@ -281,6 +311,11 @@ h3{
     100% { transform: rotate(360deg); }
   }
 
+  @-moz-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
   #further-views {
       display: none;
   }
@@ -294,6 +329,12 @@ h3{
   }
   
   @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+
+  
+  @-moz-keyframes animatebottom {
     from { bottom:-100px; opacity:0 } 
     to { bottom:0px; opacity:1 }
   }
@@ -374,142 +415,204 @@ h3{
     height: 150px;
     border-radius: 50%;
   }
+
+  .footer {
+      width: 100%;
+      background-color: #000d1a;
+      margin-top: 20px;
+  }
+
+  .column {
+      width: 100%;
+      color: #fff;
+      font-weight: bold;
+      padding-top: 40px;
+      padding-left: 40%;
+      font-size: 20px;
+  }
+  
+  .cover {
+    padding-left: 5%;
+  }
+
+  .alignment {
+      padding-top: 15px;
+      color: #ffffff;
+      font-size: 18px;
+      padding-left: 40%;
+      width: 100%;
+  }
+
+  .alignment:hover {
+      color: #0059b3;
+  }
+
+  .fa-instagram, .fa-twitter, .fa-facebook {
+      color: #fff;
+      font-size: 22px;
+      padding-left: 15%;
+  }
   
 
 
 @media screen and (max-width: 900px) {
-h2 {
-    font-size: 20px;
-}
+    h2 {
+        font-size: 20px;
+    }
+    
+    h4 {
+        font-size: 17px;
+    }
+    
+    .links .btn, .links .btn-alternate, .btn, .button {
+        font-size: 14px;
+    }
+    
+    .know-more, .testimonial, .second-testimonial {
+        font-size: 16px;
+    }
+    
+    h5 {
+        font-size: 17px;
+        font-weight:bold;
+    }
+    
+    .find-service {
+        margin-left: 8px;
+    }
+    
+    .content-list {
+        width: 65%;
+        background-color: #fff;
+        border: none;
+        border-radius: none;
+    }
+    
+    
+    
+    .search, .search-last {
+        border-right: none;
+        background-color: #f2f2f2;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        margin-top: 50px;
+        height: 240px;
+    }
+    
+    .how-it-works, .how-it-works-two {
+        font-size: 22px;
+       
+    }
+    
+    .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .fa-search, .fa-handshake, .fa-sync-alt, .fa-phone-alt, .fa-star, .fa-user-plus, .fa-eye {
+        width: 40%;
+        font-size: 40px;
+        color: #fff;
+        background-color: #0059b3;
+        border: 3px solid #cccccc;
+        border-radius: 50%;
+        padding: 15px;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .fa-user-plus, .fa-phone-alt, .fa-star, .fa-eye  {
+        background-color: #000000;
+    }
+    
+    .keypad img {
+            width: 80%;
+            display: block;
+            margin: auto;
+    }
 
-h4 {
-    font-size: 17px;
-}
+    .advert h2 {
+        font-size: 22px;
+    }
 
-.links .btn, .links .btn-alternate, .btn, .button {
-    font-size: 14px;
-}
+    .advert p {
+        font-size: 16px;
+    }
 
-.know-more, .testimonial, .second-testimonial {
+    .search p, .search-last p, .content p {
+        font-size: 15px;
+    }
+    
+    .collapsible {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    .last-item {
+        display: none;
+    }
+    
+    .item-list {
+        margin-left: 0px;
+    }
+    
+    .fa-faucet, .fa-hammer, .fa-lightbulb, .fa-tools{
+        font-size: 110px;
+    }
+    
+    .item span {
+        font-size: 14px;
+    }
+    
+    .content-list h3 {
+        padding-top: 65px;
+        font-weight: bold;
+    }
+    
+    .content-list p {
+        padding-top: -30px;
+    }
+    
+    .why-hussla {
+        padding-left: 25%;
+        border-radius: 0px;
+    }
+    
+    .why-hussla-content {
+        margin-right: 35%;
+    
+    }
+    
+    .why-hussla-content .points {
+        width: 150px;
+        font-size: 15px;
+    }
+    
+    .connector-line {
+        height: 120px;
+    }
+    
+    
+    .picture img, .second-picture img {
+        display: none;
+    }
+    
+    #loader {
+        margin-left: 40%;
+    }
+
+.column {
     font-size: 16px;
 }
 
-h5 {
-    font-size: 17px;
-    font-weight:bold;
-}
-
-.find-service {
-    margin-left: 8px;
-}
-
-.content-list {
-    width: 65%;
-    background-color: #fff;
-    border: none;
-    border-radius: none;
-}
-
-
-
-.search, .search-last {
-    border-right: none;
-    background-color: #f2f2f2;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    margin-bottom: 40px;
-    margin-top: 50px;
-    height: 240px;
-}
-
-.how-it-works, .how-it-works-two {
-    font-size: 22px;
-   
-}
-
-.fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
-    font-size: 22px;
-    text-align: center;
-}
-
-.fa-search, .fa-handshake, .fa-sync-alt, .fa-phone-alt, .fa-star, .fa-user-plus, .fa-eye {
-    width: 40%;
-    font-size: 40px;
-    color: #fff;
-    background-color: #0059b3;
-    border: 3px solid #cccccc;
-    border-radius: 50%;
-    padding: 15px;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.fa-user-plus, .fa-phone-alt, .fa-star, .fa-eye  {
-    background-color: #000000;
-}
-
-
-.search p, .search-last p, .content p {
-    font-size: 15px;
-}
-
-.collapsible {
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.last-item {
-    display: none;
-}
-
-.item-list {
-    margin-left: 0px;
-}
-
-.fa-faucet, .fa-hammer, .fa-lightbulb, .fa-tools{
-    font-size: 110px;
-}
-
-.item span {
+.alignment {
     font-size: 14px;
 }
 
-.content-list h3 {
-    padding-top: 65px;
-    font-weight: bold;
-}
-
-.content-list p {
-    padding-top: -30px;
-}
-
-.why-hussla {
-    padding-left: 25%;
-    border-radius: 0px;
-}
-
-.why-hussla-content {
-    margin-right: 35%;
-
-}
-
-.why-hussla-content .points {
-    width: 150px;
-    font-size: 15px;
-}
-
-.connector-line {
-    height: 120px;
-}
-
-
-.picture img, .second-picture img {
-    display: none;
-}
-
-#loader {
-    margin-left: 40%;
+.column, .alignment {
+    padding-left: 10%;
 }
 }
