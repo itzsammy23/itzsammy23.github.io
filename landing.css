@@ -422,6 +422,10 @@ h3{
       margin-top: 20px;
   }
 
+  .footer-container {
+      display: flex;
+  }
+
   .column {
       width: 100%;
       color: #fff;
@@ -615,4 +619,14 @@ h3{
 .column, .alignment {
     padding-left: 10%;
 }
+
+.footer-container {
+    display: block;
+    margin-left: 0%;
+}
+
+.fa-instagram, .fa-twitter, .fa-facebook {
+    padding-left: 5%;
+ }
+
 }
