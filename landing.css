@@ -33,6 +33,7 @@ body {
 
 #toggler {
     background-color: transparent;
+    border: none;
 }
 
 @media (max-width: 900px) {
