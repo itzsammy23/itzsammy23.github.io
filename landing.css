@@ -31,6 +31,10 @@ body {
     color: #11dbe2;
 }
 
+#toggler {
+    background-color: transparent;
+}
+
 @media (max-width: 900px) {
     .landing-navbar #navbarSupportedContent {
         background-color: #000d1a;
