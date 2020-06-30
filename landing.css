@@ -499,7 +499,11 @@ h3{
       font-size: 22px;
       padding-left: 15%;
   }
-
+@media screen and (min-width: 651px) and (max-width: 900px) {
+    .first-view {
+        transform: translate(-50%, -35%);
+    }
+}
   
 
 @media screen and (max-width: 900px) {
