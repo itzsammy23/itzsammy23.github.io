@@ -6,10 +6,10 @@ body {
 
 .starter {
     width: 100%;
-    background-image: url("tool-2820950_19203.jpg");
+    background-image: url("/storage/landing/tool-2820950_19203.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 550px;
   }
 
   .landing-navbar {
@@ -55,7 +55,7 @@ body {
 .first-view {
     text-align: center;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -496,191 +496,11 @@ h3{
       padding-left: 15%;
   }
 
-  @media screen and (min-width: 481px) and (max-width: 900px) {
-    .starter {
-        height: 400px;
-    }
-
-    .first-view {
-        top: 65%;
-    }
-    
-     h2 {
-         font-size: 20px;
-     }
-     
-     h4 {
-         font-size: 17px;
-     }
-     
-     .links .btn, .links .btn-alternate, .btn, .button {
-         font-size: 14px;
-     }
-     
-     .know-more, .testimonial, .second-testimonial {
-         font-size: 16px;
-     }
-     
-     h5 {
-         font-size: 17px;
-         font-weight:bold;
-     }
-     
-     .find-service {
-         margin-left: 8px;
-     }
-     
-     .content-list {
-         width: 65%;
-         background-color: #fff;
-         border: none;
-         border-radius: none;
-     }
-     
-     
-     
-     .search, .search-last {
-         border-right: none;
-         background-color: #f2f2f2;
-         border: 1px solid #cccccc;
-         border-radius: 5px;
-         margin-bottom: 40px;
-         margin-top: 50px;
-         height: 240px;
-     }
-     
-     .how-it-works, .how-it-works-two {
-         font-size: 22px;
-        
-     }
-     
-     .fa-faucet, .fa-hammer, .fa-bolt, .fa-cog {
-         font-size: 22px;
-         text-align: center;
-     }
-     
-     .fa-search, .fa-handshake, .fa-sync-alt, .fa-phone-alt, .fa-star, .fa-user-plus, .fa-eye {
-         width: 30%;
-         font-size: 40px;
-         color: #fff;
-         background-color: #0059b3;
-         border: 3px solid #cccccc;
-         border-radius: 50%;
-         padding: 15px;
-         position: absolute;
-         top: 0%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-     }
-     
-     .fa-user-plus, .fa-phone-alt, .fa-star, .fa-eye  {
-         background-color: #000000;
-     }
-     
-     .keypad img {
-             width: 80%;
-             display: block;
-             margin: auto;
-     }
- 
-     .advert h2 {
-         font-size: 22px;
-     }
- 
-     .advert p {
-         font-size: 16px;
-     }
- 
-     .search p, .search-last p, .content p {
-         font-size: 15px;
-     }
-     
-     .collapsible {
-         font-size: 17px;
-         font-weight: bold;
-     }
-     
-     .last-item {
-         display: none;
-     }
-     
-     .item-list {
-         margin-left: 0px;
-     }
-     
-     .fa-faucet, .fa-hammer, .fa-lightbulb, .fa-tools{
-         font-size: 110px;
-     }
-     
-     .item span {
-         font-size: 14px;
-     }
-     
-     .content-list h3 {
-         padding-top: 65px;
-         font-weight: bold;
-     }
-     
-     .content-list p {
-         padding-top: -30px;
-     }
-     
-     .why-hussla {
-         padding-left: 25%;
-         border-radius: 0px;
-     }
-     
-     .why-hussla-content {
-         margin-right: 35%;
-     
-     }
-     
-     .why-hussla-content .points {
-         width: 150px;
-         font-size: 15px;
-     }
-     
-     .connector-line {
-         height: 120px;
-     }
-     
-     
-     .picture img, .second-picture img {
-         display: none;
-     }
-     
-     #loader {
-         margin-left: 40%;
-     }
- 
- .column {
-     font-size: 16px;
- }
- 
- .alignment {
-     font-size: 14px;
- }
- 
- .column, .alignment {
-     padding-left: 10%;
- }
- 
- .footer-container {
-     display: block;
-     margin-left: 0%;
- }
- 
- .fa-instagram, .fa-twitter, .fa-facebook {
-     padding-left: 5%;
-  }
- 
-  }
   
 
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
    .starter {
-       height: 400px;
+       height: 450px;
    }
    
     h2 {
@@ -724,7 +544,7 @@ h3{
         border-radius: 5px;
         margin-bottom: 40px;
         margin-top: 50px;
-        height: 240px;
+        height: 285px;
     }
     
     .how-it-works, .how-it-works-two {
