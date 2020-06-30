@@ -36,6 +36,10 @@ body {
     border: none;
 }
 
+@media (min-width: 650px) {
+    #toggler {display: none};
+}
+
 
 
 @media (max-width: 900px) {
@@ -57,7 +61,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -65%);
 }
 
 h2 {
