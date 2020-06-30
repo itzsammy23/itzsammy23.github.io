@@ -36,6 +36,12 @@ body {
     border: none;
 }
 
+@media screen and (min-width: 550px) and (max-width : 900px) {
+    .first-view {
+        top: 55%;
+    }
+}
+
 @media (max-width: 900px) {
     .landing-navbar #navbarSupportedContent {
         background-color: #000d1a;
