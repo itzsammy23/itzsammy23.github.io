@@ -502,7 +502,7 @@ h3{
     }
 
     .first-view {
-        top: 55%;
+        top: 65%;
     }
     
      h2 {
@@ -560,7 +560,7 @@ h3{
      }
      
      .fa-search, .fa-handshake, .fa-sync-alt, .fa-phone-alt, .fa-star, .fa-user-plus, .fa-eye {
-         width: 40%;
+         width: 35%;
          font-size: 40px;
          color: #fff;
          background-color: #0059b3;
