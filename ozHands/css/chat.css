@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Nunito;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #ffffff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid #c3c3c3;
+}
+
+.logo{
+    height: 100px;
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+.hands{
+    color: #fff;
+}
+
+.sidebar h3{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 25px 15px;
+    color: #33cc33;
+    text-align: center;
+}
+
+.sidebar .user {
+    display: flex;
+    padding: 16px;
+    margin-left: 10%;
+}
+
+.initials{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #c3c3c3;
+    padding: 12px 8px 4px 8px;
+    font-size: 20px;
+    color: #006600;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar .user .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    padding-top: 14px;
+    padding-left: 6px;
+}
+
+.back-to-shop{
+    margin: 100px auto;
+}
+
+.back-to-shop a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #006600;
+    text-decoration: none;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.presence {
+    opacity: 0.7;
+    color: #262626;
+}
+
+div.chat {
+    margin-left: 300px;
+    padding: 0 16px;
+    height: 88vh;
+    overflow: auto;
+    background-color: #fff;
+}
+
+#messages{
+    width: 100%;
+    height: 88vh;
+    overflow-x: hidden;
+}
+
+.incoming{
+    width: 95%;
+}
+
+.outgoing{
+    float: right;
+    width: 46%;
+}
+
+form {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 74%;
+    overflow-x: hidden;
+    border-top: 1px solid #c3c3c3;
+    background-color: #f2f2f2;
+    padding: 0 15px;
+}
+
+input{
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 10px 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#message{
+    flex: 2;
+}
+
+#message:focus{
+    border: 3px solid #3399ff;
+}
+
+.time_date {
+    color: #800000;
+    display: block;
+    font-size: 12px;
+    margin: 8px 0 0;
+    float: right;
+}
+
+.sent_msg, .recieved_msg {
+    width: 98%;
+    overflow:hidden;
+    margin:10px 0 5px;
+    padding: 5px;
+}
+
+.sent_msg p{
+    background: #f3f3f3 none repeat scroll 0 0;
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 0; color:#000000;
+    padding: 5px 10px 5px 12px;
+    width:100%;
+    border: 1px solid #c3c3c3;
+}
+
+.recieved_msg h4{
+    margin-right: 22px;
+}
+
+.recieved_msg p {
+    font-size: 14px;
+    margin: 0; color:#000000;
+    padding: 5px 10px 5px 12px;
+    width:95%;
+}
+
+.recieved_msg:hover{
+    background-color: #c3c3c3;
+}
+
+.fa-paper-plane{
+    color: #fffef7;
+    font-size: 20px;
+}
+
+.send{
+    background-color: #33cc33;
+    color: #fffef7;
+    cursor: pointer;
+    margin: 10px 0;
+    padding:10px 25px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+}
+
+.fa-expand{
+    color: #000d1a;
+    font-size: 25px;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label .fa-paperclip{
+    font-size: 35px;
+    color: #262626;
+    display: inline-block;
+    padding: 15px 10px;
+}
+
+.inputfile:focus + label .fa-paperclip,
+.inputfile + label .fa-upload:hover {
+    color: #000d1a;
+}
+
+.inputfile + label {
+    cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar {
+        border-bottom: 1px solid #c3c3c3;
+    }
+
+    .logo{width: 400px;}
+    .sidebar h3{display: none;}
+    .sidebar .user {float: left; margin: auto;}
+    div.chat {margin-left: 0; height: 60vh;}
+    form{width: 95%;}
+    .back-to-shop{float: right; margin: 0; padding-top: 30px;}
+}
