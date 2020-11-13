@@ -156,6 +156,7 @@ h2{
 .business-advisory .info{
     width: 55%;
     padding: 140px 20px;
+    text-align: justify;
 }
 
 .advisory-track{
@@ -444,6 +445,7 @@ h2{
         margin: auto;
         height: 220px;
     }
+
 
     .business-advisory .border-line,.business-advisory .content-box .window .border-line{
         margin: auto;
