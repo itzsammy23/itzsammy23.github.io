@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;
+    font-family: Roboto Slab;
+}
+
+nav{
+    background-color:rgb(247, 247, 247);
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.19), 0 16px 32px rgba(0, 0, 0, 0.20);
+}
+
+.navbar-title{
+    color: rgb(9, 48, 109);
+    font-weight: bold;
+    font-size: 25px;
+    padding: 25px;
+    width: 30%;
+}
+
+.navbar-title span{
+    color: rgb(234, 18, 112);
+}
+
+.navbar-links{
+    width: 70%;
+    height: 100%;
+}
+
+.navbar-links a{
+    color: rgb(9, 48, 109);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 30px;
+    float: right;
+    font-weight: bold;
+}
+
+.navbar-links a:hover{
+    color: rgb(234, 18, 112);
+}
+
+.active{
+    border-bottom: 3px solid rgb(234, 18, 112);
+}
+
+.toggler{
+    display: none;
+}
+
+.business-transformation{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+
+.business-transformation .info{
+    display: block;
+    width: 40%;
+    padding: 40px;
+    animation: show 5s;
+}
+
+@-webkit-keyframes show {
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes show {
+    from{opacity: 0.1;}
+    to{opacity: 1;}
+}
+
+@keyframes show{
+    from{opacity: 0.1;}
+    to{opacity: 1;}
+}
+
+
+.info h2{
+    width: 75%;
+    padding: 20px;
+}
+
+.border-line{
+    width: 50px;
+    height: 3px;
+    background-color: rgb(234, 18, 112);
+    margin-left: 20px;
+}
+
+h2{
+    color: rgb(9, 48, 109);
+}
+
+ .info p{
+    font-size: 17px;
+    padding: 20px;
+    line-height: 1.5em;
+    width: 90%;
+}
+
+.business-transformation .business-image{
+    width: 60%;
+    margin-left: 15px;
+    padding: 40px;
+}
+
+.business-transformation .business-image img{
+    width: 100%;
+    height: 400px;
+    animation: slide 2s;
+}
+
+@keyframes slide{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+
+.business-advisory{
+    background-color: rgb(249, 249, 249);
+    margin: 65px 0;
+    width: 100%;
+    position: relative;
+}
+
+.advisory-flex{
+    display: flex;
+    width: 100%;
+}
+
+.business-advisory .business-image{
+    width: 45%;
+    padding: 80px 15px;
+}
+
+.business-advisory .business-image img{
+    width: 100%;
+    height: 450px;
+}
+
+.business-advisory .info{
+    width: 55%;
+    padding: 140px 20px;
+}
+
+.advisory-track{
+    width: 100%;
+    padding-bottom: 60px;
+    display: flex;
+    position: absolute;
+    top: 75%;
+}
+
+.advisory-track .content-box{
+    width: 22%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #c3c3c3;
+    margin-left: 8px;
+}
+
+.advisory-track .content-box .window h3, .modal .window h3{
+    padding: 22px 3px;
+}
+
+.advisory-track .content-box .window .border-line, .modal .window .border-line{
+    margin-left: 0px;
+}
+
+.advisory-track .content-box .window p, .modal .window p{
+    padding: 30px 30px 30px 0;
+    text-align: justify;
+    width: 96%;
+    line-height: 1.2em;
+    font-size: 14px;
+}
+
+.advisory-track .content-box .window p{
+    height: 100px;
+    overflow-y: hidden;
+}
+
+.advisory-track .content-box button{
+    background-color: #ffffff;
+    border: none;
+    color: rgb(9, 48, 109);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.display{
+    margin-top: 280px;
+}
+
+.analytics .content-box{
+    width: 25%;
+    margin-left: 45px;
+}
+
+.nav-hide{
+    animation: move-out 2s;
+}
+
+.nav-show {
+    animation: move-in 2s;
+}
+
+.display-box{
+    animation: fade-in 4s;
+}
+
+.enterprise{
+    background-color: rgb(49, 60, 79);
+}
+
+.enterprise .info h2{
+    color: rgb(234, 18, 112);
+}
+
+.enterprise .info p{
+    color: #fff;
+}
+
+.enterprise .advisory-track .content-box{
+    background-color: rgb(255, 255, 255);
+}
+
+.block{
+    display: inline;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: .1;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes move-out {
+    from{
+        height: 83px;
+        opacity: 1;
+    }
+
+    to{
+        height: 0px;
+        opacity: .1;
+    }
+}
+
+@keyframes move-in {
+    from{
+        height: 0px;
+        opacity: .1;
+    }
+    to{
+        height: 83px;
+        opacity: 1;
+    }
+}
+
+.read-more{
+    display: none;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: pad 2s;
+}
+
+@keyframes pad {
+    from{padding-top: 15px}
+    to{padding-top: 120px}
+}
+
+
+.modal-content{
+    background-color: #fefefe;
+    border: 1px solid #c3c3c3;
+    margin: auto;
+    padding: 20px;
+    width: 85%;
+}
+
+.close{
+    font-size: 28px;
+    color: #aaaaaa;
+    font-weight: bold;
+    float: right;
+}
+
+.close:hover, .close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-box-div{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+        .navbar-links{
+            display: none;
+        }
+
+    .navbar-title{
+        width: 65%;
+    }
+
+    .toggler{
+        display: block;
+        float: right;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: right;
+        width: 35%;
+        padding: 30px;
+        position: fixed;
+        top: 0;
+        right: 5px;
+    }
+
+     .responsive{
+        display: block;
+        top: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .responsive a{
+        width: 100%;
+        transition: scroll-in 0.5s;
+    }
+
+    @-webkit-keyframes scroll-in {
+        from{height: 100px;}
+        to{height: 260px;}
+    }
+
+    @-moz-keyframes scroll-in {
+        from{height: 100px;}
+        to{height: 160px;}
+    }
+
+    @keyframes scroll-in {
+        from{height: 100px;}
+        to{height: 160px;}
+    }
+
+
+    .fa-bars{
+        font-size: 22px;
+        color: rgb(9, 48, 109);
+        cursor: pointer;
+    }
+
+    .navbar-links .active{
+        font-weight: bold;
+        border-bottom: none;
+        color: rgb(234, 18, 112);
+    }
+
+    .navbar-links a:hover{
+        background-color: rgb(234, 18, 112);
+        color: #ffffff;
+    }
+    .business-transformation{
+        width: 100%;
+    }
+
+    .business-transformation .info{
+        width: 90%;
+        margin-left: 5px;
+    }
+
+    .business-image{
+        display: none;
+    }
+
+    .advisory-flex{
+        display: block;
+        width: 85%;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .business-advisory, .advisory-track{
+        position: unset;
+    }
+
+    .advisory-track{
+        display: block;
+        width: 90%;
+    }
+
+    .business-advisory .business-image{
+        width: 95%;
+        display: block;
+        padding: 10px;
+    }
+
+    .business-advisory .info{
+        display: block;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .business-advisory .business-image img{
+        display: block;
+        margin: auto;
+    }
+
+    .business-advisory .border-line,.business-advisory .content-box .window .border-line{
+        margin: auto;
+        width: 100px;
+    }
+
+    .business-advisory .info h2{
+        width: 90%;
+        text-align: center;
+    }
+
+    .advisory-track .content-box{
+        width: 90%;
+        margin: 19px;
+    }
+
+    .advisory-track .content-box h3{
+        text-align: center;
+    }
+
+    .advisory-track .content-box .window h3, .modal .window h3{
+        font-size: 18px;
+    }
+
+    .business-advisory .advisory-flex .info h2{
+        font-size: 17px;
+    }
+
+    .business-advisory .advisory-flex .info p{
+        font-size: 15px;
+    }
+}
