@@ -442,6 +442,7 @@ h2{
     .business-advisory .business-image img{
         display: block;
         margin: auto;
+        height: 220px;
     }
 
     .business-advisory .border-line,.business-advisory .content-box .window .border-line{
