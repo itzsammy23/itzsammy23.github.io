@@ -422,6 +422,10 @@ h2{
         margin: auto;
     }
 
+    .advisory-flex .info{
+        margin-left: 8px;
+    }
+
     .business-advisory, .advisory-track{
         position: unset;
     }
@@ -470,7 +474,7 @@ h2{
     }
 
     .advisory-track .content-box .window h3, .modal .window h3{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .business-advisory .advisory-flex .info h2{
