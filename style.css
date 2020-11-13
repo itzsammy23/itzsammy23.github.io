@@ -424,10 +424,6 @@ h2{
         margin: auto;
     }
 
-    .business-advisory .advisory-flex .info{
-        margin-right: 13px;
-    }
-
     .business-advisory, .advisory-track{
         position: unset;
     }
@@ -445,7 +441,8 @@ h2{
 
     .business-advisory .info{
         display: block;
-        padding: 15px 25px 15px 0;
+        padding: 15px;
+        margin-right: 20px;
         width: 100%;
     }
 
