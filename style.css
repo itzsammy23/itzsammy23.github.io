@@ -437,6 +437,7 @@ h2{
         display: block;
         padding: 15px;
         width: 100%;
+        margin: auto;
     }
 
     .business-advisory .business-image img{
