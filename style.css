@@ -156,6 +156,9 @@ h2{
 .business-advisory .info{
     width: 55%;
     padding: 140px 20px;
+}
+
+.business-advisory .advisory-flex .info p{
     text-align: justify;
 }
 
