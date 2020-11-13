@@ -199,6 +199,7 @@ h2{
 .advisory-track .content-box .window p{
     height: 100px;
     overflow-y: hidden;
+    display: inline-block;
 }
 
 .advisory-track .content-box button{
@@ -424,7 +425,7 @@ h2{
     }
 
     .business-advisory .advisory-flex .info{
-        margin-right: 8px;
+        margin-right: 13px;
     }
 
     .business-advisory, .advisory-track{
