@@ -1,0 +1,45 @@
+.song-title{
+    cursor: pointer;
+}
+
+.show-songs{
+    padding: 14px;
+}
+
+.show-songs .alert-danger{
+    padding: 3px;
+    height: 30px;
+    width: 85%;
+}
+
+.song-results{
+    padding: 2px;
+    background-color: #ffffff;
+    margin-top: -10px;
+    width: 85%;
+    cursor: pointer;
+}
+
+.appended-song {
+    background-color: #444040;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 7px;
+}
+
+.appended-song span{
+    font-size: 12px;
+    margin-left: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+
+.appended-song .appended-song-name{
+    color: #ffffff;
+}
+
+.playlist-name{
+    cursor:  pointer;
+}
+
